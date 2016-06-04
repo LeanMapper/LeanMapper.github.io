@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Entity
-permalink: /docs/entity
+permalink: /docs/entity/
 ---
 
 
