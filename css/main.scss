@@ -37,3 +37,13 @@ $on-laptop:        800px;
 //@import "syntax-highlighting";
 @import "stylesheet";
 @import "github-light";
+
+
+.docNav a {
+  background: transparent none repeat scroll 0 0;
+  font-size: 100%;
+  padding: 0;
+  vertical-align: baseline;
+  color: #339900;
+  margin: 0 30px 0 0;
+}

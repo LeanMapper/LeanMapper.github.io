@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tutorial - entities
+title: Tutoriál - Definice entit
 permalink: /tutorial/entities/
 ---
 
