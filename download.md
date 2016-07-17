@@ -1,5 +1,0 @@
----
-title: Download
-permalink: /download/
----
-
