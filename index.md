@@ -29,6 +29,6 @@ layout: default
 
 # Jak začít
 
-1. Přečtete si [tutorial](/tutorial/)
-2. Podle potřeby nastudujte [podrobnou dokumentaci](/docs/)
+1. Přečtete si [quick start](/cs/quick-start/)
+2. Podle potřeby nastudujte [podrobnou dokumentaci](/cs/docs/)
 3. Nepřehlédněte [dokumentaci API](http://www.leanmapper.com/api/v1.3.1/)

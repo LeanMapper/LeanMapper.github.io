@@ -18,4 +18,11 @@ github_username:  castamir
 # Build settings
 markdown: kramdown
 
-permalink: none
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"
