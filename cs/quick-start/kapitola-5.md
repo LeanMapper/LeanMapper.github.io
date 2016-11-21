@@ -1,5 +1,5 @@
 ---
-title: Kapitola IV – Definice repositářů
+title: Kapitola V – Ukázky použití (a položených SQL dotazů)
 ---
 
 * [Úvod](#page-title)
