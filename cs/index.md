@@ -12,5 +12,6 @@ title: Dokumentace
 * [Changelog](/cs/changelog/)
 * [Download](/cs/download/)
 * [Rozšíření, addony](/cs/rozsireni/)
+* [Články a videa](/cs/clanky-videa/)
 * [Podpořte vývoj](/cs/donate/)
 * [API dokumentace](/cs/api/)
