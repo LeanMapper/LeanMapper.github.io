@@ -1,10 +1,13 @@
 ---
-title: Dokumentace
+title: Příručka
 ---
 
-Pět kapitol dokumentace vás seznámí se všemy aspekty Lean Mapperu a pomohou vám vytěžit z něj maximum.
+Pět kapitol příručky vás seznámí se všemy aspekty Lean Mapperu a pomohou vám vytěžit z něj maximum.
 
-K dispozici je také [dokumentace API](/cs/api/).
-
+1. [Entity](entity/)
+2. [Repositáře](repositare/)
+3. [Konvence](konvence/)
+4. [Persistence](persistence/)
+5. [Filtry](filtry/)
 
 [Entity »](entity/) |
