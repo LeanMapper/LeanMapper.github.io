@@ -11,5 +11,6 @@ title: Dokumentace
 	5. [Filtry](/cs/docs/filtry/)
 * [Changelog](/cs/changelog/)
 * [Download](/cs/download/)
+* [Rozšíření, addony](/cs/rozsireni/)
 * [Podpořte vývoj](/cs/donate/)
 * [API dokumentace](/cs/api/)
