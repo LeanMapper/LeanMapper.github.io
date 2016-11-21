@@ -2,8 +2,15 @@
 title: Download
 ---
 
-* [Aktuální vývojová verze (z GitHubu)](https://github.com/Tharos/LeanMapper/archive/develop.zip)
-* [**Lean Mapper v2.0.1**](http://leanmapper.com/resources/leanmapper-v2.0.1.zip)
-* [Lean Mapper v2.0.0](http://leanmapper.com/resources/leanmapper-v2.0.0.zip)
-* [Lean Mapper v1.4.0](http://leanmapper.com/resources/leanmapper-v1.4.0.zip)
-* [Lean Mapper v1.3.1](http://leanmapper.com/resources/leanmapper-v1.3.1.zip)
+LeanMapper je primárně dostupný přes [Packagist](https://packagist.org/packages/tharos/leanmapper).
+
+```
+composer require tharos/leanmapper
+```
+
+
+## Vývojová verze a Git
+
+Zdrojový kód je dostupný pod MIT licencí na server [GitHub.com](https://github.com/tharos/leanmapper).
+
+* [Vývojová verze (ZIP)](https://github.com/Tharos/LeanMapper/archive/develop.zip)
