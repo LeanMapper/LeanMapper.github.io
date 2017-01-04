@@ -9,4 +9,9 @@ Výchozí implementací je třída `LeanMapper\DefaultMapper`.
 **Poznámka:** Mapper je dostupný až od verze [2.0.0](/cs/changelog/). Ve starších verzích sloužily k částečnému ovlivnění konvencí metody `LeanMapper\Entity::getEntityClass` a `LeanMapper\Repository::getEntityClass`.
 
 
+## Související
+
+* [CamelCase to under_score mapper](/cs/tutorials/camelcase-to-underscore-mapper/)
+
+
 [« Filtry](/cs/docs/filtry/) |
