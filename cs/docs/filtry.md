@@ -6,4 +6,4 @@ title: Filtry
 
 Prozatím je k [dispozici mikrodokumentace](http://forum.nette.org/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=3#p105447).
 
-[« Persistence](/cs/docs/persistence/) |
+[« Persistence](/cs/docs/persistence/) | [Mapper »](/cs/docs/mapper/)

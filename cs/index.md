@@ -9,6 +9,7 @@ title: Dokumentace
 	3. [Konvence](/cs/docs/konvence/)
 	4. [Persistence](/cs/docs/persistence/)
 	5. [Filtry](/cs/docs/filtry/)
+	6. [Mapper](/cs/docs/mapper/)
 * [Changelog](/cs/changelog/)
 * [Download](/cs/download/)
 * [Rozšíření, addony](/cs/rozsireni/)
