@@ -2,6 +2,148 @@
 title: Changelog
 ---
 
+## [3.1.1](https://github.com/Tharos/LeanMapper/tree/v3.1.1) (10. 7. 2016)
+
+[Oznámení na GitHubu (anglicky)](https://github.com/Tharos/LeanMapper/releases/tag/v3.1.1)
+
+* Nette DI rozšíření - opravena kompatibilita s Nette 2.4
+
+* Známé chyby:
+	[#97](https://github.com/Tharos/LeanMapper/pull/97)
+
+Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/compare/v3.1.0...v3.1.1?expand=1).
+
+
+## [3.1.0](https://github.com/Tharos/LeanMapper/tree/v3.1.0) (9. 5. 2016)
+
+[Oznámení na GitHubu (anglicky)](https://github.com/Tharos/LeanMapper/releases/tag/v3.1.0)
+
+* Opravena chyba [#85](https://github.com/Tharos/LeanMapper/issues/85)
+
+* Vylepšeny chybové hlášky
+
+* `Entity::get` vrací `null` pro nullable položky detachovaných entit
+
+* `Entity::get` a `Entity::set` umožňuje přes `passThru` změnu datového typu (BC break)
+
+* Nette DI rozšíření - opravena chyba [#95](https://github.com/Tharos/LeanMapper/pull/95)
+
+* Vyžaduje PHP 5.4 nebo vyšší (BC break)
+
+* Místo zastaralého balíčku `dg/dibi` vyžaduje `dibi/dibi`
+
+* Známé chyby:
+	[#97](https://github.com/Tharos/LeanMapper/pull/97)
+
+Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/compare/v3.0.0...v3.1.0?expand=1).
+
+
+## [3.0.0](https://github.com/Tharos/LeanMapper/tree/v3.0.0) (8. 3. 2016)
+
+[Oznámení na GitHubu (anglicky)](https://github.com/Tharos/LeanMapper/releases/tag/v3.0.0)
+
+* Vylepšen výkon
+
+* Vyžaduje Dibi 3.x (BC break)
+
+* Přidáno rozšíření pro Nette DI (obsahuje chybu [#95](https://github.com/Tharos/LeanMapper/pull/95))
+
+* Přidána anotace `m:default` jako alternativa pro nastavení výchozí hodnoty property
+
+* Přidána anotace `m:column` jako alternativa pro nastavení názvu sloupce
+
+* Známé chyby:
+	[#85](https://github.com/Tharos/LeanMapper/issues/85),
+	[#95](https://github.com/Tharos/LeanMapper/pull/95),
+	[#97](https://github.com/Tharos/LeanMapper/pull/97)
+
+Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/compare/v2.3.0...v3.0.0?expand=1).
+
+
+## [2.3.0](https://github.com/Tharos/LeanMapper/tree/v2.3.0) (9. 2. 2016)
+
+* Přidána podpora pro `ResultProxy`
+
+	[Informace na GitHubu](https://github.com/Tharos/LeanMapper/issues/53#issuecomment-41611844)
+
+* Zjednodušeno a vylepšeno rozhraní entity, kód z magických metod `Entity::__get` a `Entity::__set` přesunut do nových metod `Entity::get` a `Entity::set`
+
+* Změněna viditelnost metody `Entity::mergeFilters` na `protected`
+
+* Vylepšena metoda `Entity::__isset` ([commit](https://github.com/Tharos/LeanMapper/commit/b4a9dc7d99227d68721e4df23e3049d62c0a82dc))
+
+* Vylepšen výkon
+
+* Opravena chyba [#73](https://github.com/Tharos/LeanMapper/issues/73)
+
+* Různá vylepšení a opravy
+
+* Známé chyby:
+	[#85](https://github.com/Tharos/LeanMapper/issues/85),
+	[#97](https://github.com/Tharos/LeanMapper/pull/97)
+
+Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/compare/v2.2.0...v2.3.0?expand=1).
+
+
+## [2.2.0](https://github.com/Tharos/LeanMapper/tree/v2.2.0) (27. 4. 2014)
+
+[Oznámení na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=22#p124335)
+
+* Zachovávání kolekce ID ve Fluent
+
+	[Informace na GitHubu](https://github.com/Tharos/LeanMapper/issues/30)
+
+* Nová metoda  Connection::hasFilter
+
+	[Informace na GitHubu](https://github.com/Tharos/LeanMapper/pull/26)
+
+* Nově se lze odkazovat na aliasy v SQL
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=20#p119516)
+
+* [„Preloading“](https://github.com/Tharos/LeanMapper/commit/f21c9f7898633ece4ac30fdc9b73f43824a6d09d), který umožňuje vznik [nadstavby zvané LQL](https://github.com/Tharos/LeanMapper/issues/46)
+
+Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/compare/v2.1.0...v2.2.0?expand=1).
+
+
+## [2.1.0](https://github.com/Tharos/LeanMapper/tree/v2.1.0) (13. 12. 2013)
+
+[Oznámení na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=18#p115098)
+
+* Přidáno rozhraní `IEntityFactory` včetně výchozí implementace `DefaultEntityFactory` (BC break)
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=15#p113095)
+
+* Zásadní zlepšení chybových hlášek
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=15#p113095)
+
+* Implicitní filtry
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=16#p113453)
+
+* Anonymní filtry
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=16#p114029)
+
+* Dekompozice `Entity::__get` a `Entity::__set`
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=17#p114413)
+
+* `Entity::createCollection` a `Repository::createCollection` přesunuto do `IEntityFactory::createCollection` (BC break)
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=17#p114393)
+
+* přidána podpora pro výchozí hodnoty (v anotaci) null a prázdný řetězec
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=18#p114545)
+
+* z vlastních getterů a setterů se lze nově odkazovat na `__get` a `__set`
+
+	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=18#p115096)
+
+Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/compare/v2.0.1...v2.1.0?expand=1).
+
 
 ## [2.0.1](https://github.com/Tharos/LeanMapper/tree/v2.0.1) (12. 9. 2013)
 
