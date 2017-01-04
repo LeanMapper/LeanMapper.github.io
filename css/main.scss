@@ -23,6 +23,10 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
 //@mixin media-query($device) {
 //    @media screen and (max-width: $device) {
 //        @content;
@@ -34,7 +38,7 @@ $on-laptop:        800px;
 //@import "layout";
 //@import "syntax-highlighting";
 @import "normalize";
-//@import "syntax-highlighting";
+@import "syntax-highlighting";
 @import "stylesheet";
 @import "github-light";
 
