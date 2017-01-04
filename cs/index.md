@@ -10,6 +10,7 @@ title: Dokumentace
 	4. [Persistence](/cs/docs/persistence/)
 	5. [Filtry](/cs/docs/filtry/)
 	6. [Mapper](/cs/docs/mapper/)
+	7. [EntityFactory](/cs/docs/entity-factory/)
 * [Ukázky použití a zajímavá řešení](/cs/tutorials/)
 * [Changelog](/cs/changelog/)
 * [Download](/cs/download/)

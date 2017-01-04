@@ -10,5 +10,6 @@ Pět kapitol příručky vás seznámí se všemy aspekty Lean Mapperu a pomohou
 4. [Persistence](persistence/)
 5. [Filtry](filtry/)
 6. [Mapper](mapper/)
+7. [EntityFactory](entity-factory/)
 
 [Entity »](entity/) |

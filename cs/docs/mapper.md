@@ -14,4 +14,4 @@ Výchozí implementací je třída `LeanMapper\DefaultMapper`.
 * [CamelCase to under_score mapper](/cs/tutorials/camelcase-to-underscore-mapper/)
 
 
-[« Filtry](/cs/docs/filtry/) |
+[« Filtry](/cs/docs/filtry/) | [EntityFactory »](/cs/docs/entity-factory/)
