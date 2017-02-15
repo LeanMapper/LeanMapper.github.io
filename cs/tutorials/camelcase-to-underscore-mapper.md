@@ -2,7 +2,7 @@
 title: CamelCase to under_score mapper
 ---
 
-Existuje mnoho důvodů proč v databázi pojmenovávat *sloupce/tabulky* pouze malými písmeny a jednotlivá slova oddělovat podtržítkem `_` *(tzv. under score konvence)*. Pokud bychom ale na straně PHP chtěli k těmto datům přistupovat pomocí *camel case konvence*, tedy vizuálně oddělovat velkým písmenem na začátku jednotlivých slov, **LeanMapper** k tomu nabízí všechny potřebné prostředky.
+Existuje mnoho důvodů proč v databázi pojmenovávat *sloupce/tabulky* pouze malými písmeny a jednotlivá slova oddělovat podtržítkem `_` *(tzv. under score konvence)*. Pokud bychom ale na straně PHP chtěli k těmto datům přistupovat pomocí *camel case konvence*, tedy vizuálně oddělovat velkým písmenem na začátku jednotlivých slov, **Lean Mapper** k tomu nabízí všechny potřebné prostředky.
 
 K zprovoznění této funkcionality postačí upravit [**mapper**](/cs/docs/mapper/), tedy třídu, která dědí po `LeanMapper\DefaultMapper` nebo jen implementuje rozhraní `LeanMapper\IMapper`. Nejprve si připravíme funkce, které nám budou převádět `fooBar` na `foo_bar` a obráceně. Můžeme je klidně implementovat jako statické veřejné metody vlastního mapperu.
 
