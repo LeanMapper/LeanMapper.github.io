@@ -10,12 +10,12 @@ Vyvíjím jej ve svém volném čase a snažím se mu poskytovat nadstandardní 
 
 V blízké budoucnosti bych rád realizoval následující záměry:
 
-## 1) Vydání stabilní verze 2.0
+## <del>1) Vydání stabilní verze 2.0</del>
 
 
-## 2) Doplnění changelogu
+## <del>2) Doplnění changelogu</del>
 
-Ihned po vydání stabilní verze bych rád zaktualizoval changelog, aby byl usnadněn přechod z verze 1.4 a všechny novinky byly přehledně vypsané na jednom místě.
+<del>Ihned po vydání stabilní verze bych rád zaktualizoval changelog, aby byl usnadněn přechod z verze 1.4 a všechny novinky byly přehledně vypsané na jednom místě.</del>
 
 
 ## 3) Aktualizace dokumentace
