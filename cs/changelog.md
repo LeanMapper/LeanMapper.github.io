@@ -2,6 +2,11 @@
 title: Changelog
 ---
 
+## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
+
+* `m:enum` umožňuje použít neprefixované konstanty (`SomeClass::*`) ([#100](https://github.com/Tharos/LeanMapper/pull/100))
+
+
 ## [3.1.1](https://github.com/Tharos/LeanMapper/tree/v3.1.1) (10. 7. 2016)
 
 [Oznámení na GitHubu (anglicky)](https://github.com/Tharos/LeanMapper/releases/tag/v3.1.1)
