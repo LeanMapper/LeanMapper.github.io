@@ -1,5 +1,6 @@
 ---
 title: Konvence
+redirect_from: "/dokumentace/konvence"
 ---
 
 Lean Mapper se vám bude velmi dobře používat, pokud budete v maximální možné míře dodržovat následující konvence:

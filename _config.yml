@@ -26,3 +26,6 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "page"
+
+gems:
+  - jekyll-redirect-from

@@ -1,5 +1,6 @@
 ---
 title: Kapitola III – Definice entit
+redirect_from: "/quick-start/kapitola-3"
 ---
 
 * [Úvod](#page-title)

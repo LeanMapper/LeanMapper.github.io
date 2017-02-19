@@ -1,5 +1,6 @@
 ---
 title: Podpořte vývoj
+redirect_from: "/donate"
 ---
 
 Lean Mapper můžete zcela zdarma používat ve svých komerčních i nekomerčních projektech.

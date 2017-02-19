@@ -1,5 +1,6 @@
 ---
 title: Kapitola II – Vytvoření databáze
+redirect_from: "/quick-start/kapitola-2"
 ---
 
 V quick startu budeme pracovat s SQLite databází s následující strukturou:

@@ -1,5 +1,6 @@
 ---
 title: Dokumentace
+redirect_from: "/dokumentace/"
 ---
 
 * [Quick start](/cs/quick-start/)

@@ -1,5 +1,6 @@
 ---
 title: Filtry
+redirect_from: "/dokumentace/filtry"
 ---
 
 *Kapitola bude zpracována v rámci dokumentace pro vyšší stable verzi Lean Mapperu.*

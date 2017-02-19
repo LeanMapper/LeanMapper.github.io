@@ -1,5 +1,6 @@
 ---
 title: Persistence
+redirect_from: "/dokumentace/persistence"
 ---
 
 * [Úvod](#page-title)

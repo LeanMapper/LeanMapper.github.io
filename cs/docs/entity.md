@@ -1,5 +1,6 @@
 ---
 title: Entity
+redirect_from: "/dokumentace/entity"
 ---
 
 * [Úvod](#page-title)
