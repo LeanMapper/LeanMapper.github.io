@@ -1,5 +1,6 @@
 ---
 title: Repositáře
+redirect_from: "/dokumentace/repositare"
 ---
 
 * [Úvod](#page-title)

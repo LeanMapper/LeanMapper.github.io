@@ -1,5 +1,6 @@
 ---
 title: Changelog
+redirect_from: "/changelog"
 ---
 
 ## [3.1.1](https://github.com/Tharos/LeanMapper/tree/v3.1.1) (10. 7. 2016)

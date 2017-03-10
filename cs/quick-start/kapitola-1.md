@@ -1,5 +1,6 @@
 ---
 title: Kapitola I – Instalace
+redirect_from: "/quick-start/kapitola-1"
 ---
 
 Doporučený způsob instalace je pomocí [Composeru](http://getcomposer.org/):

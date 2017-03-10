@@ -1,5 +1,6 @@
 ---
 title: Kapitola V – Ukázky použití (a položených SQL dotazů)
+redirect_from: "/quick-start/kapitola-5"
 ---
 
 * [Úvod](#page-title)
