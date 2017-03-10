@@ -12,7 +12,7 @@ redirect_from: "/dokumentace/"
 	5. [Filtry](/cs/docs/filtry/)
 	6. [Mapper](/cs/docs/mapper/)
 	7. [EntityFactory](/cs/docs/entity-factory/)
-	8. [Integrace LeanMapperu do aplikace](/cs/docs/integrace-do-aplikace/)
+	8. [Integrace Lean Mapperu do aplikace](/cs/docs/integrace-do-aplikace/)
 * [Ukázky použití a zajímavá řešení](/cs/tutorials/)
 * [Changelog](/cs/changelog/)
 * [Download](/cs/download/)

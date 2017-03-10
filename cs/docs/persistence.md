@@ -127,7 +127,7 @@ Odstraní z databáze knihu s ID 1 a v zápětí vloží novou knihu se stejným
 
 Určitě se podívejte na implementaci metody `persist($entity)` v abstraktní třídě `LeanMapper\Repository`. Mechanismus persistence je z ní dobře patrný.
 
-[Entita](http://leanmapper.com/api/v1.3.1/class-LeanMapper.Entity.html) vychází repositáři vstříc svými metodami `isModified()`, `isDetached()`, `detach()`, `getModifiedData()` a `markAsCreated($id, $table, $connection)`. Metoda `isModified()` vrací informaci, zda byla data v entitě od okamžiku jejího vytvoření pozměněná, `isDetached()` vrací informaci, zda se jedná o nově vytvořenou entitu nebo v databázi již existující, `detach()` umožňuje prohlásit entitu za nově vytvořenou, `getModifiedData()` vrací pole pozměněných hodnot (ve formátu položka => pozměněná hodnota) a konečně `markAsCreated($id, $table, $connection)` slouží ke změnu stavu entity z nově vytvořené na již uloženou.
+[Entita](https://codedoc.pub/tharos/leanmapper/v3.1.1/class-LeanMapper.Entity.html) vychází repositáři vstříc svými metodami `isModified()`, `isDetached()`, `detach()`, `getModifiedData()` a `markAsCreated($id, $table, $connection)`. Metoda `isModified()` vrací informaci, zda byla data v entitě od okamžiku jejího vytvoření pozměněná, `isDetached()` vrací informaci, zda se jedná o nově vytvořenou entitu nebo v databázi již existující, `detach()` umožňuje prohlásit entitu za nově vytvořenou, `getModifiedData()` vrací pole pozměněných hodnot (ve formátu položka => pozměněná hodnota) a konečně `markAsCreated($id, $table, $connection)` slouží ke změnu stavu entity z nově vytvořené na již uloženou.
 
 Všimněte si parametrů, které přijímá poslední zmíněná metoda. ID záznamu v databázi zná bezprostředně po jeho vytvoření pouze repositář a tímto způsobem ho sděluje entitě. Další dva parametry pak slouží k tomu, aby si entita od té doby mohla sama načítat entity, ke kterým má nadefinovanou vazbu.
 
@@ -151,7 +151,7 @@ echo $author->name;
 
 Franta? Nebo snad něco jiného?
 
-Vypíše Franta. Jak byste asi očekávali. ;) Důvodem je to, že ačkoliv první a druhá instance `Model\Entity\Author` skutečně nejsou ekvivalentní, obě operují nad stejnou instancí [`LeanMapper\Result`](http://leanmapper.com/api/v1.3.1/class-LeanMapper.Result.html), která zapouzdřuje vlastní data. Chování Lean Mapperu se v podobných situacích snaží být maximálně intuitivní a transparentní.
+Vypíše Franta. Jak byste asi očekávali. ;) Důvodem je to, že ačkoliv první a druhá instance `Model\Entity\Author` skutečně nejsou ekvivalentní, obě operují nad stejnou instancí [`LeanMapper\Result`](https://codedoc.pub/tharos/leanmapper/v3.1.1/class-LeanMapper.Result.html), která zapouzdřuje vlastní data. Chování Lean Mapperu se v podobných situacích snaží být maximálně intuitivní a transparentní.
 
 Dobrá rada na závěr: nikdy neuchovávejte žádné hodnoty entity přímo v entitě, ale vždy je deleguje až do `LeanMapper\Result` (typicky pomocí třídy `LeanMapper\Row`, jejíž instance je přítomná v každé entitě).
 

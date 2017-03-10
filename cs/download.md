@@ -3,7 +3,7 @@ title: Download
 redirect_from: "/download"
 ---
 
-LeanMapper je primárně dostupný přes [Packagist](https://packagist.org/packages/tharos/leanmapper).
+Lean Mapper je primárně dostupný přes [Packagist](https://packagist.org/packages/tharos/leanmapper).
 
 ```
 composer require tharos/leanmapper

@@ -60,7 +60,7 @@ class TagRepository extends Repository
 
 To je vše. S touto šesticí tříd si v našem quick startu bohatě vystačíme.
 
-Abstraktní třída [`LeanMapper\Repository`](http://leanmapper.com/api/v1.3.1/class-LeanMapper.Repository.html) obsahuje řadu užitečných metod, které nám ve většině případů vyřeší vytváření, persistenci a odstraňování entit. Načítání entit ale Lean Mapper v této abstraktní třídě záměrně neřeší, protože požadavky na něj bývají různé. Nicméně obsahuje alespoň podpůrné metody, které lze ve vlastních metodách pro načítání entit výhodně využít.
+Abstraktní třída [`LeanMapper\Repository`](https://codedoc.pub/tharos/leanmapper/v3.1.1/class-LeanMapper.Repository.html) obsahuje řadu užitečných metod, které nám ve většině případů vyřeší vytváření, persistenci a odstraňování entit. Načítání entit ale Lean Mapper v této abstraktní třídě záměrně neřeší, protože požadavky na něj bývají různé. Nicméně obsahuje alespoň podpůrné metody, které lze ve vlastních metodách pro načítání entit výhodně využít.
 
 Určitě nepřehlédněte [část dokumentace věnovanou repositářím](/cs/docs/repositare).
 
