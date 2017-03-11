@@ -87,7 +87,7 @@ Všimněte si, že kniha může existovat klidně i bez recenzenta (položka `$r
 
 U položky `$author` vazební sloupec uvádět nemusíme, protože jeho název dodržuje konvence Lean Mapperu (blíže popsané v [dokumentaci](/cs/docs/konvence/)). Tyto konvence není nutné dodržovat, Lean Mapper je dobře připraven na nejrůznější odchylky, ale v takovém případě je nutné počítat s o něco více psaním. Konvence je tedy vhodné dodržovat všude tam, kde to je možné.
 
-***TIP:** Všimněte si, že Lean Mapper rozumí nejen definici jmenného prostoru, ale i použitým use statementům. Podrobně o tom [pojednává dokumentace](/cs/docs/entity/#use).*
+***TIP:** Všimněte si, že Lean Mapper rozumí nejen definici jmenného prostoru, ale i použitým use statementům.*
 
 
 ### M:N vazby
@@ -112,10 +112,10 @@ Následující entita bude reprezentovat autora (připomeňme si, že autoři mo
 namespace Model\Entity;
 
 /**
-* @property Book[] $books m:belongsToMany
-* @property Book[] $reviewedBooks m:belongsToMany(reviewer_id)
-* @property string|null $web
-*/
+ * @property Book[] $books m:belongsToMany
+ * @property Book[] $reviewedBooks m:belongsToMany(reviewer_id)
+ * @property string|null $web
+ */
 class Author extends Person
 {
 
@@ -123,7 +123,7 @@ class Author extends Person
 	{
 		$tags = array();
 		foreach (array(null, 'reviewer_id') as $viaColumn) {
-			foreach ($this->row->referencing('book', null, $viaColumn) as $book) {
+			foreach ($this->row->referencing('book', $viaColumn) as $book) {
 				foreach ($book->referencing('book_tag') as $tagRelation) {
 					$row = $tagRelation->referenced('tag');
 					$tags[$tagRelation->tag_id] = new Tag($row);
