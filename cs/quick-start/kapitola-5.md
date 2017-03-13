@@ -24,10 +24,12 @@ function separate() {
 	echo "\n-----\n\n";
 }
 
-$connection = new DibiConnection(array(
+$connection = new \LeanMapper\Connection(array(
 	'driver' => 'sqlite3',
 	'database' => __DIR__ . '/path-to-database/quickstart.sq3',
 ));
+$mapper = new \LeanMapper\DefaultMapper;
+$entityFactory = new \LeanMapper\DefaultEntityFactory;
 
 header('Content-type: text/plain;charset=utf8');
 ```
@@ -47,7 +49,7 @@ Vypište všechny knihy a u každé uveďte jejího autora a seznam výpůjček.
 ``` php
 <?php
 
-$bookRepository = new BookRepository($connection);
+$bookRepository = new BookRepository($connection, $mapper, $entityFactory);
 
 foreach ($bookRepository->findAll() as $book) {
 	write($book->name);
@@ -123,7 +125,7 @@ Vypište všechny známé autory (respektive recenzenty) a u každého uveďte, 
 ``` php
 <?php
 
-$authorRepository = new AuthorRepository($connection);
+$authorRepository = new AuthorRepository($connection, $mapper, $entityFactory);
 
 foreach ($authorRepository->findAll() as $author) {
 	write($author->name);
@@ -203,7 +205,7 @@ Vypište všechny známé autory (respektive recenzenty) a ke každému z nich v
 ``` php
 <?php
 
-$authorRepository = new AuthorRepository($connection);
+$authorRepository = new AuthorRepository($connection, $mapper, $entityFactory);
 
 foreach ($authorRepository->findAll() as $author) {
 	write($author->name);
