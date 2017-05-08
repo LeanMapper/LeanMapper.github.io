@@ -143,4 +143,4 @@ class BookPresenter extends BasePresenter {
 
 V rámci presenteru pak máme repositář přístupný přes `$this->bookRepository`.
 
-[« Mapper](/cs/docs/mapper/) |
+[« Mapper](/cs/docs/mapper/) | [SQL strategie »](/cs/docs/sql-strategie/)

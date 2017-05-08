@@ -13,6 +13,7 @@ redirect_from: "/dokumentace/"
 	6. [Mapper](/cs/docs/mapper/)
 	7. [EntityFactory](/cs/docs/entity-factory/)
 	8. [Integrace Lean Mapperu do aplikace](/cs/docs/integrace-do-aplikace/)
+	9. [SQL strategie](/cs/docs/sql-strategie/)
 * [Ukázky použití a zajímavá řešení](/cs/tutorials/)
 * [Changelog](/cs/changelog/)
 * [Download](/cs/download/)

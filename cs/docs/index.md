@@ -12,5 +12,6 @@ Pět kapitol příručky vás seznámí se všemy aspekty Lean Mapperu a pomohou
 6. [Mapper](mapper/)
 7. [EntityFactory](entity-factory/)
 8. [Integrace Lean Mapperu do aplikace](integrace-do-aplikace/)
+9. [SQL strategie](sql-strategie/)
 
 [Entity »](entity/) |
