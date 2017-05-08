@@ -16,6 +16,7 @@ twitter_username: MiraPaulik
 github_username:  castamir
 
 # Build settings
+exclude: ['tests']
 markdown: kramdown
 
 permalink: pretty
