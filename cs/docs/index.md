@@ -2,7 +2,7 @@
 title: Příručka
 ---
 
-Pět kapitol příručky vás seznámí se všemy aspekty Lean Mapperu a pomohou vám vytěžit z něj maximum.
+Příručka vás seznámí se všemy aspekty Lean Mapperu a pomůže vám vytěžit z něj maximum.
 
 1. [Entity](entity/)
 2. [Repositáře](repositare/)
