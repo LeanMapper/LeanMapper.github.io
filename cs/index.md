@@ -20,3 +20,4 @@ redirect_from: "/dokumentace/"
 * [Články a videa](/cs/clanky-videa/)
 * [Podpořte vývoj](/cs/donate/)
 * [API dokumentace](/cs/api/)
+* [Fórum](https://forum.dibiphp.com/cs/f82-lean-mapper), [Gitter](https://gitter.im/castamir/LeanMapperChat), [Slack](https://pehapkari.slack.com/messages/leanmapper)
