@@ -164,7 +164,7 @@ Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/
 
 	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=4#p105850)
 
-	[Ukázka hezkého mapperu od Jana Nedbala](http://pastebin.com/dZjk1qaw)
+	[Ukázka hezkého mapperu od Jana Nedbala](https://pastebin.com/dZjk1qaw)
 
 * Odstraněna přežitá metoda `LeanMapper\Entity::getEntityClass`, je žádoucí použít `LeanMapper\IMapper::getEntityClass` (BC break)
 
@@ -210,7 +210,7 @@ Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/
 * Přidán systém událostí
 
 	[Informace na fóru](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=10#p108822) \\
-	[Propojení s Kdyby\Events](http://forum.nette.org/cs/15165-observer-v-nette-mam-spravny-navrh#p108884)
+	[Propojení s Kdyby\Events](https://forum.nette.org/cs/15165-observer-v-nette-mam-spravny-navrh#p108884)
 
 * Provedena dekompozice `LeanMapper\Repository` (vyčleněny protected metody `Repository::insertIntoDatabase`, `Repository::updateInDatabase`, `Repository::deleteFromDatabase`)
 
@@ -257,7 +257,7 @@ Všechny změny lze vidět v tomto [diffu](https://github.com/Tharos/LeanMapper/
 
 * Přidán příznak `m:extra` (možnost snadného vlastního rozšíření anotace)
 
-* Upraven `LeanMapper\Result` tak, že při získávání souvisejících dat může volitelně využívat „IN“ nebo „UNION“ strategii (viz jak to řeší NotORM a také viz [tento článek](http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/)) – je to důležité pro správné limitování a řazení
+* Upraven `LeanMapper\Result` tak, že při získávání souvisejících dat může volitelně využívat „IN“ nebo „UNION“ strategii (viz jak to řeší NotORM a také viz [tento článek](https://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/)) – je to důležité pro správné limitování a řazení
 
 * Přidán příznak `m:enum` (podpora pro výčtový typ, například `m:enum(self::STATUS_*))` – thx [@JanTvrdik](https://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi#p105080)
 
