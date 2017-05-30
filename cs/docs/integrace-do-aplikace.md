@@ -110,7 +110,7 @@ services:
     - Model\BookRepository
 ```
 
-Repositářům nemusíme ručně předávat závislosti, o to se automaticky postará [auto-wiring](http://doc.nette.org/cs/2.4/configuring#toc-auto-wiring) v Nette.
+Repositářům nemusíme ručně předávat závislosti, o to se automaticky postará [auto-wiring](https://doc.nette.org/cs/2.4/configuring#toc-auto-wiring) v Nette.
 
 
 ### Předání repositáře do presenteru  {#toc-nette-presenter}
