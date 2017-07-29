@@ -59,4 +59,4 @@ Všimněte si dovětku `#union`, který zakončuje definici vazby - validní jso
 Při použití filtrů je každý filtr aplikován na každou samostatnou část UNION dotazu - viz příklad výše, kdy je filtrem přidána klauzule `LIMIT` do každé části dotazu.
 
 
-[« Integrace Lean Mapperu do aplikace](/cs/docs/integrace-do-aplikace/) |
+[« Integrace Lean Mapperu do aplikace](/cs/docs/integrace-do-aplikace/) | [Systém událostí »](/cs/docs/system-udalosti/)
