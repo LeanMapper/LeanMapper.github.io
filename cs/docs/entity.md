@@ -12,10 +12,16 @@ redirect_from: "/dokumentace/entity"
 	* [Přístup k položkám](#toc-pristup-k-polozkam)
 	* [Hromadné přiřazování](#toc-hromadne-prirazovani)
 * [Definice vazeb (vztahů mezi entitami) a strategie](#toc-vazby-v-anotacich)
-* [Příznaky m:passThru, m:enum](#toc-priznaky-passthru-enum)
+* [Příznaky](#toc-priznaky)
+	* [m:passThru](#toc-priznaky-passThru)
+	* [m:enum](#toc-priznaky-enum)
+	* [m:useMethods](#toc-priznaky-useMethods)
+	* [Název databázového sloupce (m:column)](#toc-priznaky-column)
+	* [Vlastní příznaky](#toc-priznaky-vlastni)
 * [Správa jednoduchých M:N vazeb](#toc-sprava-mn-vazeb)
-* [Defaultní (výchozí) hodnoty](#toc-vychozi-hodnoty)
-* [Vlastní příznaky](#toc-vlastni-priznaky)
+* [Výchozí hodnoty](#toc-vychozi-hodnoty)
+	* [Výchozí hodnoty v anotacích (m:default)](#toc-vychozi-hodnoty-anotace)
+	* [Metoda initDefaults()](#toc-vychozi-hodnoty-initDefaults)
 
 
 Entity reprezentují potomci abstraktní třídy `LeanMapper\Entity`. Ta obsahuje definici magických metod `__get`, `__set` a `__call`, které usnadňují přístup k položkám entity, a dále obsahuje elementární sadu metod užitečných v různých situacích. V neposlední řadě tato třída udržuje i instanci `LeanMapper\Row`, která zapouzdřuje vlastní data.
@@ -32,9 +38,11 @@ Důležité je, že tyto doménové objekty mají několik typických rysů:
 
 - Mohou plně využívat potenciálu OOP. Kromě stavu v položkách mohou samozřejmě obsahovat i metody, které jej mění, a je-li k tomu důvod, mohou i posílat zprávy jiným objektům. To, co by entita *ještě měla* a *už neměla* dělat, je nad rámec quick startu a budeme se tím hlouběji zabývat v podrobné dokumentaci.
 
+
 ## Definice položek {#toc-polozky}
 
 Položky entity lze nadefinovat dvěma způsoby: pomocí *anotací* a pomocí *přístupových metod*.
+
 
 ### Definice pomocí anotací {#toc-definice-pomoci-anotaci}
 
@@ -132,6 +140,7 @@ class Book extends \LeanMapper\Entity
 {
 }
 ```
+
 
 ### Definice pomocí přístupových metod {#toc-definice-pomoci-metod}
 
@@ -241,6 +250,7 @@ Pokud je definována přístupová metoda, má při přístupu k položce vždy 
 
 ## Rozhraní entity {#toc-rozhrani-entity}
 
+
 ### Přístup k položkám {#toc-pristup-k-polozkam}
 
 Následující ukázka demonstruje, jak lze k položkám entity přistupovat. Je jedno zda jsou položky definovány pomocí anotací nebo pomocí přístupových metod:
@@ -314,7 +324,108 @@ U dovětků platí, že jejich jednotlivé části jsou odděleny dvojtečkou a 
 | OrderDetail $detail m:belongsToOne | OrderDetail $detail m:belongsToOne(order_id:orderdetail)
 
 
-## Příznaky m:passThru, m:enum {#toc-priznaky-passthru-enum}
+## Příznaky {#toc-priznaky}
+
+U každé položky zapsané v anotaci můžeme uvést celou řadu doplňujících příznaků.
+
+
+### m:passThru {#toc-priznaky-passThru}
+
+Příznak umožňuje prohnat čtenou, resp. zapisovanou, nízkoúrovňovou hodnotu položky naší vlastní metodou. To se hodí pro validaci i konverzi hodnot mezi databází a entitou.
+
+```php?start_inline=1
+/**
+ * @property string $email m:passThru(checkEmail)
+ */
+class Author extends LeanMapper\Entity
+{
+	protected function checkEmail($value)
+	{
+		// zkontrolujeme, zda je email validní
+		return $value; // vrátíme hodnotu
+	}
+}
+```
+
+Metoda `checkEmail` bude zavolána jak při čtení, tak při zápisu hodnoty. V příznaku můžeme uvést 2 metody oddělené svislítkem `|`, v takovém případě se první metoda použije pro čtení, druhá pro zápis. Jednu z částí můžeme i vynechat.
+
+```
+m:passThru(checkEmail) // čtení i zápis využije stejné metody
+m:passThru(beautifyEmail|filterEmail) // čtení jde přes metodu beautifyEmail, zápis přes filterEmail
+m:passThru(|filterEmail) //pro čtení se žádná metoda nepoužije, ke čtení dojde napřímo, zápis jde přes filterEmail
+m:passThru(beautifyEmail|) // čtení jde přes metodu beautifyEmail, pro zápis se žádná metoda nepoužije
+```
+
+
+### m:enum {#toc-priznaky-enum}
+
+Pomocí příznaku `m:enum` řekneme Lean Mapperu, že položka může obsahovat jen předem daný výčet hodnot. Pokud se pokusíme do položky přiřadit hodnotu, která do výčtu nespadá, Lean Mapper vyhodí výjimku. Hodnoty definujeme pomocí konstant.
+
+``` php?start_inline=1
+/**
+ * @property int $id
+ * @property string $status m:enum(self::STATUS_*)
+ */
+class Book extends LeanMapper\Entity
+{
+	const STATUS_ACTIVE = 'active';
+	const STATUS_INACTIVE = 'inactive';
+	const STATUS_DELETED = 'deleted';
+}
+```
+
+Kromě výrazu `self::STATUS_*` můžeme uvést i klíčová slova `static::` a `parent::`, nebo konkrétní třídu (`m:enum(Book::STATUS_*)`). Příznak respektuje i jmenné prostory (`namespace`) a `use` statementy.
+
+
+### m:filter {#toc-priznaky-filter}
+
+Příznak využijeme při použití filtrů. Těm se věnujeme v samostatné [kapitole](/cs/docs/filtry/).
+
+
+### m:useMethods {#toc-priznaky-useMethods}
+
+Pomocí příznaku `m:useMethods`  říkáme Lean Mapperu, že má při přístupu k položce povinně použít uživatelem definovaný setter/getter. Stejně tak tento příznak použijeme v případě, kdy máme setter nebo getter nestandardně pojmenovaný.
+
+* `@property $name m:useMethods` - použijí se metody `getName` a `setName`
+* `@property $name m:useMethods(readName|writeName)` - použíjí se metody `readName` a `writeName`
+* `@property $name m:useMethods(|writeName)` - použijí se metody `getName` a `writeName`
+* `@property-read $name m:useMethods(readName)` - položka jen pro čtení, použije se metoda `readName`
+* `@property-read $name m:useMethods(readName|writeName)` - logická chyba - protože je položka jen pro čtení, bude vyvolána výjimka
+
+
+### Název databázového sloupce (m:column) {#toc-priznaky-column}
+
+V případě použití výchozích [konvencí](/cs/docs/konvence/) je název databázového sloupce shodný s názvem položky. Případné odchylky můžeme specifikovat pomocí [mapperu](/cs/docs/mapper/) a jeho metody `getColumn`, pohodlnější však bývá uvést název sloupce přímo v anotaci položky - k tomu slouží příznak `m:column`.
+
+```
+@property string $name m:column(my_name)
+```
+
+**Poznámka:** příznak `m:column` je dostupný až od verze **3.0.0**.
+
+Druhou možností je uvést název sloupce do závorky hned za název položky.
+
+```
+@property string $name (my_name)
+```
+
+
+### Vlastní příznaky {#toc-priznaky-vlastni}
+
+K položkám v anotacích můžeme připsat i vlastní příznaky. Co do nich zapíšeme a jak je využijeme záleží na naší fantazii. K hodnotám se pak dostaneme pomocí reflexe entity.
+
+```php?start_inline=1
+/**
+ * @property string $name m:comment(Name of author)
+ */
+class Author extends LeanMapper\Entity
+{
+}
+
+$property = $author->getReflection()->getEntityProperty('name');
+$property->hasCustomFlag('comment'); // zjistíme zda byl u položky zapsán náš příznak m:comment
+$property->getCustomerFlagValue('comment'); // získáme hodnotu zapsanou v příznaku, v našem případě řetězec "Name of author"
+```
 
 
 ## Správa jednoduchých M:N vazeb {#toc-sprava-mn-vazeb}
@@ -429,10 +540,61 @@ $applicationRepository->persist($application);
 ```
 
 
-## Defaultní (výchozí) hodnoty {#toc-vychozi-hodnoty}
+## Výchozí hodnoty {#toc-vychozi-hodnoty}
+
+Výchozí hodnoty položek lze nadefinovat buď pomocí anotace u konkrétních položek, nebo metodou `initDefaults()`. V obou případech platí, že výchozí hodnoty se berou v potaz pouze u nově vytvořených entit.
 
 
-## Vlastní příznaky {#toc-vlastni-priznaky}
+### Výchozí hodnoty v anotacích (m:default) {#toc-vychozi-hodnoty-anotace}
+
+U položek, které obsahují jednoduché datové typy (`int`, `bool`, `float`, `string` a `array`)  lze výchozí hodnoty zapsat přímo v anotaci pomocí příznaku `m:default`. Parser výchozích hodnot rozumí číslům zapsaným v různých notacích, nerozhodí ho různé velikosti písmen, umožňuje escapování uvozovek v textu, apod. Měl by se chovat téměř identicky, jako interpret PHP. Pojďme si ukázat několik příkladů.
+
+``` php?start_inline=1
+/**
+ * @property bool $active m:default(true)
+ * @property int $count m:default(10)
+ * @property float $count m:default(-2.2e-3)
+ * @property string $title m:default('McDonald\'s restaurant')
+ * @property array $list m:default(array())
+ * @property DateTime|null $date m:default(null)
+ */
+```
+
+**Poznámka:** anotace `m:default` je dostupná od verze **3.0.0**.
+
+Alternativně můžeme pro zápis výchozích hodnot v anotacích používat rovnítkovou syntaxi:
+
+``` php?start_inline=1
+/**
+ * @property bool $active = true
+ * @property int $count = 10
+ * @property float $count = -2.2e-3
+ * @property string $title = 'McDonald\'s restaurant'
+ * @property array $list = array()
+ * @property DateTime|null $date = null
+ */
+```
+
+Rovnítko musí následovat hned za názvem položky.
+
+
+### Metoda initDefaults() {#toc-vychozi-hodnoty-initDefaults}
+
+Druhou možností definice výchozích hodnot je metoda `initDefaults`. Ta se volá hned poté, co jsou položkám přiřazeny výchozí hodnoty uvedené v anotacích. Můžeme tak doladit hodnoty uvedené v anotacích, případně položkám přiřadit komplexnější hodnoty, které nedokážeme pomocí anotací vyjádřit.
+
+```php?start_inline=1
+class Book extends LeanMapper\Entity
+{
+	protected function initDefaults()
+	{
+		$this->active = true;
+		$this->count = 10;
+		$this->title = 'McDonald\'s restaurant';
+		$this->list = array();
+		$this->date = null;
+	}
+}
+```
 
 
 [« Úvod do dokumentace](/cs/docs/) | [Repositáře »](/cs/docs/repositare/)

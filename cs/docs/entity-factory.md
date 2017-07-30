@@ -9,4 +9,4 @@ Výchozí implementací je třída `LeanMapper\DefaultEntityFactory`.
 **Poznámka:** EntityFactory je dostupná až od verze [2.1.0](/cs/changelog/).
 
 
-[« Mapper](/cs/docs/mapper/) |
+[« Mapper](/cs/docs/mapper/) | [Integrace Lean Mapperu do aplikace »](/cs/docs/integrace-do-aplikace/)
