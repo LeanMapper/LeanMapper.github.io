@@ -13,5 +13,6 @@ Příručka vás seznámí se všemy aspekty Lean Mapperu a pomůže vám vytě�
 7. [EntityFactory](entity-factory/)
 8. [Integrace Lean Mapperu do aplikace](integrace-do-aplikace/)
 9. [SQL strategie](sql-strategie/)
+10. [Systém událostí](system-udalosti/)
 
 [Entity »](entity/) |
