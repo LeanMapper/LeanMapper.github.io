@@ -5,6 +5,10 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* Vylepšena detekce položek s duplicitním názvem ([#104](https://github.com/Tharos/LeanMapper/pull/104))
+
+* Přidána podpora pro pomlčku v názvech příznaků (např. `m:flag-name`) ([#107](https://github.com/Tharos/LeanMapper/pull/107))
+
 * `m:enum` umožňuje použít neprefixované konstanty (`SomeClass::*`) ([#100](https://github.com/Tharos/LeanMapper/pull/100))
 
 
