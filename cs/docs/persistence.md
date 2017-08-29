@@ -72,7 +72,7 @@ Jak je z ukázek patrné, persistence v Lean Mapperu je naprosto intuitivní.
 
 ## Na co dávat pozor {#toc-na-co-davat-pozor}
 
-Aby byla persistence v Lean Mapperu co nejintuitivnější, má určitě specifika.
+Aby byla persistence v Lean Mapperu co nejintuitivnější, má určitá specifika.
 
 V Lean Mapperu strikně platí, že entity neumějí samy sebe persistovat – potřebují k tomu [repositáře](/cs/docs/repositare/). V následující ukázce se uloží pozměněný název knihy, ale už ne pozměněný název autora:
 
