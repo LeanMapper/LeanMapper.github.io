@@ -8,8 +8,7 @@
 # Site settings
 title: Lean Mapper
 email: miras.paulik@seznam.cz
-description: > # this means to ignore newlines until "baseurl:"
-   Lean Mapper is a tiny ORM based on powerful dibi database abstraction library for PHP 5.
+description: Lean Mapper is a tiny ORM based on powerful dibi database abstraction library for PHP.
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: MiraPaulik
