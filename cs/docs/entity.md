@@ -324,6 +324,9 @@ U dovětků platí, že jejich jednotlivé části jsou odděleny dvojtečkou a 
 | OrderDetail $detail m:belongsToOne | OrderDetail $detail m:belongsToOne(order_id:orderdetail)
 
 
+U vazeb `hasMany`, `belongsToMany` a `belongsToOne` je možné uvést dodatek `#union` - jeho význam vysvětluje kapitola [SQL strategie](../sql-strategie/).
+
+
 ## Příznaky {#toc-priznaky}
 
 U každé položky zapsané v anotaci můžeme uvést celou řadu doplňujících příznaků.
