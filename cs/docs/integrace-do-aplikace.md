@@ -27,7 +27,7 @@ $connection = new LeanMapper\Connection(array(
 ));
 ```
 
-**Tip:** `LeanMapper\Connection` přebírá stejné parametry jako třída [`DibiConnection`](https://api.dibiphp.com/3.0/Dibi.Connection.html).
+**Tip:** `LeanMapper\Connection` přebírá stejné parametry jako třída [`Dibi\Connection`](https://api.dibiphp.com/Dibi.Connection.html).
 
 
 ## Mapper  {#toc-mapper}

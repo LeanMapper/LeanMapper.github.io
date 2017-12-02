@@ -4,8 +4,8 @@ layout: default
 
 # Co je Lean Mapper
 
-- **Tenké ORM pro PHP postavené nad knihovnou [dibi](https://dibiphp.com)**
-<br> Prověřená a výkonná knihovna dibi poskytuje Lean Mapperu *stabilní půdu pod nohama* a umožňuje psát kód pro *širokou řadu databázových systémů*.
+- **Tenké ORM pro PHP postavené nad knihovnou [Dibi](https://dibiphp.com)**
+<br> Prověřená a výkonná knihovna Dibi poskytuje Lean Mapperu *stabilní půdu pod nohama* a umožňuje psát kód pro *širokou řadu databázových systémů*.
 
 - **ORM, které sestavuje elegantní a efektivní SQL dotazy**
 <br> Lean Mapper je silně inspirován knihovnou [NotORM](http://www.notorm.com) a obsahuje vlastní minimalistickou implementaci „NotORM principu“ (stahování souvisejících záznamů pro celý výsledek najednou místo jednotlivě).
@@ -14,7 +14,7 @@ layout: default
 <br> Stabilita a bezchybná funkčnost má při vývoji Lean Mapperu *nejvyšší prioritu*. Každá vydaná verze je označena kódem ve tvaru X.Y.Z a platí, že *změny v rámci řady Z jsou vždy zpětně kompatibilní*. Opravné balíčky jsou *vždy portovány do všech chybou dotčených řad X a Y*.
 
 - **Knihovna s minimem závislostí**
-<br> Jedinou závislostí Lean Mapperu je [dibi](https://dibiphp.com).
+<br> Jedinou závislostí Lean Mapperu je [Dibi](https://dibiphp.com).
 
 
 # Co Lean Mapper není
