@@ -13,7 +13,7 @@ title: Systém událostí
 
 ## Registrace událostí {#toc-registrace}
 
-Jako obsluhu události vždy registrujeme nějaký callback - může se jednat o anonymní funkci, metodu objektu apod. Každá zaregistrovaná obslužná funkce dostane jako parametr entitu, se kterou se pracuje.
+Jako obsluhu události vždy registrujeme nějaký callback - může se jednat o anonymní funkci, metodu objektu apod. Každá zaregistrovaná obslužná funkce dostane jako parametr entitu, se kterou se pracuje. Výjimku tvoří události `onBeforeDelete` a `onAfterDelete`, které kromě entity akceptují i ID databázového záznamu.
 
 ``` php?start_inline=1
 $authorRepository = new AuthorRepository($connection, $mapper, $entityFactory);
