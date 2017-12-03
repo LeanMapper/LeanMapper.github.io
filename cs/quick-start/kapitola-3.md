@@ -76,7 +76,7 @@ class Book extends \LeanMapper\Entity
 }
 ```
 
-***TIP:** SQLite, které v quick startu používáme, nemá samostatný datový typ pro datum a čas a i knihovna dibi vrací při použití SQLite driveru datum a čas jako textový řetězec. Samozřejmě by bylo možné (a i vhodné) nadefinovat v této entitě položku pubdate pomocí metod obsahujících konverzi z/do DateTime, ale v quick startu nebudeme do takových detailů zacházet. Dodejme, že celá věc by byla snazší při použití databáze MySQL a MySQL dibi driveru, který datum vrací jako instanci DibiDateTime.*
+***TIP:** SQLite, které v quick startu používáme, nemá samostatný datový typ pro datum a čas a i knihovna Dibi vrací při použití SQLite driveru datum a čas jako textový řetězec. Samozřejmě by bylo možné (a i vhodné) nadefinovat v této entitě položku pubdate pomocí metod obsahujících konverzi z/do DateTime, ale v quick startu nebudeme do takových detailů zacházet. Dodejme, že celá věc by byla snazší při použití databáze MySQL a MySQL Dibi driveru, který datum vrací jako instanci Dibi\DateTime.*
 
 
 ### 1:N vazby

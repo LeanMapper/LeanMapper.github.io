@@ -27,7 +27,7 @@ $connection = new LeanMapper\Connection(array(
 ));
 ```
 
-**Tip:** `LeanMapper\Connection` přebírá stejné parametry jako třída [`DibiConnection`](https://api.dibiphp.com/3.0/Dibi.Connection.html).
+**Tip:** `LeanMapper\Connection` přebírá stejné parametry jako třída [`Dibi\Connection`](https://api.dibiphp.com/Dibi.Connection.html).
 
 
 ## Mapper  {#toc-mapper}
@@ -130,7 +130,7 @@ class BookPresenter extends BasePresenter {
 ```
 
 
-Alternativně lze pro předání repositáře do presenteru můžeme využít anotaci [`@inject`](https://doc.nette.org/cs/2.4/presenters#toc-pouziti-modelovych-trid).
+Alternativně můžeme použít anotaci [`@inject`](https://doc.nette.org/cs/2.4/presenters#toc-pouziti-modelovych-trid).
 
 ``` php?start_inline=1
 class BookPresenter extends BasePresenter {
