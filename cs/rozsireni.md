@@ -2,6 +2,9 @@
 title: Rozšíření, addony
 ---
 
+_Některá rozšíření naleznete také na fóru v sekci [Rozšíření](https://leanmapper-forum.intm.org/t/rozsireni)._
+
+
 ## Query object
 
 * [inlm/query-object](https://github.com/inlm/query-object) - fork [mbohuslavek/leanmapper-query](https://github.com/mibk/LeanMapperQuery)
