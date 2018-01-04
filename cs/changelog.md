@@ -5,6 +5,8 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* PostgreSQL - opravena [chyba](https://github.com/Tharos/LeanMapper/issues/59) při volání `$entity->removeFromX()` ([#114](https://github.com/Tharos/LeanMapper/pull/114))
+
 * Vylepšena detekce položek s duplicitním názvem ([#104](https://github.com/Tharos/LeanMapper/pull/104))
 
 * Přidána podpora pro pomlčku v názvech příznaků (např. `m:flag-name`) ([#107](https://github.com/Tharos/LeanMapper/pull/107))
