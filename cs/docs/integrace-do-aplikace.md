@@ -85,6 +85,9 @@ services:
 
 **Poznámka:** *rozšíření je dostupné od verze **3.0**.*
 
+*Pokud vám výchozí DI rozšíření nevyhovuje, můžete zkusit [doplňky](/cs/rozsireni/#integrace-do-nette) vyvíjené komunitou.*
+
+
 ### Ruční definice  {#toc-nette-config}
 
 Pokud nechceme, nebo nemůžeme použít předpřipravené DI rozšíření, můžeme jednotlivé *služby* definovat ručně. Do konfiguračního souboru aplikace (`config.neon`) si přídáme následující parametry a definice služeb:

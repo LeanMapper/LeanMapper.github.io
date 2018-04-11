@@ -2,6 +2,11 @@
 title: Články a videa
 ---
 
+## Články
+
+* [Jan Pecha: Lean Mapper - přeměňte své mappery v Lego](https://www.janpecha.cz/blog/leanmapper-premente-sve-mappery-v-lego/) (7. 4. 2018)
+
+
 ## Videa
 
 * [Míra Paulík – Model s Lean Mapper](https://www.youtube.com/watch?v=fpVAgwBoEEc) (31. 10. 2015, [Poslední sobota 74](https://forum.nette.org/cs/24460-posledni-sobota-74-model-praha))

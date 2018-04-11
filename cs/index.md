@@ -15,11 +15,17 @@ redirect_from: "/dokumentace/"
 	8. [Integrace Lean Mapperu do aplikace](/cs/docs/integrace-do-aplikace/)
 	9. [SQL strategie](/cs/docs/sql-strategie/)
 	10. [Systém událostí](/cs/docs/system-udalosti/)
+
+-----
+
 * [Ukázky použití a zajímavá řešení](/cs/tutorials/)
-* [Changelog](/cs/changelog/)
-* [Download](/cs/download/)
 * [Rozšíření, addony](/cs/rozsireni/)
 * [Články a videa](/cs/clanky-videa/)
-* [Podpořte vývoj](/cs/donate/)
-* [API dokumentace](/cs/api/)
 * [Fórum](https://leanmapper-forum.intm.org/), [Fórum (staré)](https://forum.dibiphp.com/cs/f82-lean-mapper), [Gitter](https://gitter.im/castamir/LeanMapperChat), [Slack](https://pehapkari.slack.com/messages/leanmapper)
+
+-----
+
+* [Download](/cs/download/)
+* [Changelog](/cs/changelog/)
+* [API dokumentace](/cs/api/)
+* [Podpořte vývoj](/cs/donate/)

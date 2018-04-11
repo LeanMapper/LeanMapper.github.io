@@ -27,5 +27,5 @@ defaults:
     values:
       layout: "page"
 
-gems:
+plugins:
   - jekyll-redirect-from
