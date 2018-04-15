@@ -5,6 +5,22 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* Hodnota příznaku v anotacích může nyní obsahovat zanořené závorky (např. `m:default(array())`) ([#122](https://github.com/Tharos/LeanMapper/pull/122))
+
+* V anotaci položky nelze pro zápis výchozí hodnoty použít rovnítkovou syntaxi zároveň s příznakem `m:default` ([#122](https://github.com/Tharos/LeanMapper/pull/122))
+
+* Hodnota zapsaná v příznaku `m:default` je konvertována na správný datový typ ([#122](https://github.com/Tharos/LeanMapper/pull/122))
+
+* Opravena chyba, kdy příznak `m:default` nebyl označen jako výchozí hodnota (`$property->hasDefaultValue()` vracelo `false`) ([#119](https://github.com/Tharos/LeanMapper/pull/119))
+
+* Opravena chyba se změnou datového typu v passThru setteru ([#117](https://github.com/Tharos/LeanMapper/pull/117), [#118](https://github.com/Tharos/LeanMapper/pull/118))
+
+* Opraveno generování složitějších SQL dotazů při použití UNION strategie ([#109](https://github.com/Tharos/LeanMapper/pull/109))
+
+* Opravena chyba, kdy se Lean Mapper snažil použít i settery a gettery s viditelností private a protected ([#97](https://github.com/Tharos/LeanMapper/pull/97))
+
+* Opravena chyba, kdy při použití `m:enum` nešlo do nullable položky přiřadit `null` ([#116](https://github.com/Tharos/LeanMapper/pull/116))
+
 * PostgreSQL - opravena [chyba](https://github.com/Tharos/LeanMapper/issues/59) při volání `$entity->removeFromX()` ([#114](https://github.com/Tharos/LeanMapper/pull/114))
 
 * Vylepšena detekce položek s duplicitním názvem ([#104](https://github.com/Tharos/LeanMapper/pull/104))
