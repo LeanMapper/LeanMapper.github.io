@@ -93,4 +93,9 @@ class BookRepository extends \LeanMapper\Repository
 ```
 
 
+## Související
+
+* Příručka / [Systém událostí](/cs/docs/system-udalosti/)
+
+
 [« Entity](/cs/docs/entity/) | [Konvence »](/cs/docs/konvence/)
