@@ -1,5 +1,6 @@
 ---
 layout: default
+active: home
 ---
 
 # Co je Lean Mapper

@@ -4,10 +4,10 @@
 	{% include head.html %}
 </head>
 <body>
-	<section class="page-header">
+	<section class="page-header{% if page.active != "home" %} page-header-subpage{% endif %}">
 		{% include header.html %}
 	</section>
-	<section class="main-content">
+	<section class="main-content{% if page.active != "home" %} main-content-subpage{% endif %}">
 		{{ content }}
 		<footer class="site-footer">
 			{% include footer.html %}
