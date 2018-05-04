@@ -5,6 +5,8 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+## [3.2.0](https://github.com/Tharos/LeanMapper/tree/v3.2.0) (1. 5. 2018)
+
 * Hodnota příznaku v anotacích může nyní obsahovat zanořené závorky (např. `m:default(array())`) ([#122](https://github.com/Tharos/LeanMapper/pull/122))
 
 * V anotaci položky nelze pro zápis výchozí hodnoty použít rovnítkovou syntaxi zároveň s příznakem `m:default` ([#122](https://github.com/Tharos/LeanMapper/pull/122))
