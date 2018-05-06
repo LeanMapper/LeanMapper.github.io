@@ -131,7 +131,7 @@ Odstraní z databáze knihu s ID 1 a v zápětí vloží novou knihu se stejným
 
 Určitě se podívejte na implementaci metody `persist($entity)` v abstraktní třídě `LeanMapper\Repository`. Mechanismus persistence je z ní dobře patrný.
 
-[Entita](https://codedoc.pub/tharos/leanmapper/master/class-LeanMapper.Entity.html) vychází repositáři vstříc svými metodami `isModified()`, `isDetached()`, `detach()`, `getModifiedRowData()`, `attach($id)`, `markAsUpdated()` a `makeAlive($entityFactory, $connection, $mapper)`. Metoda `isModified()` vrací informaci, zda byla data v entitě od okamžiku jejího vytvoření pozměněná, `isDetached()` vrací informaci, zda se jedná o nově vytvořenou entitu nebo v databázi již existující, `detach()` umožňuje prohlásit entitu za nově vytvořenou, `getModifiedRowData()` vrací pole pozměněných hodnot (ve formátu položka => pozměněná hodnota), `attach($id)` slouží ke změnu stavu entity z nově vytvořené na již uloženou, `markAsUpdated()` označí entitu za nepozměněnou a konečně `makeAlive($entityFactory, $connection, $mapper)` poskytuje entitě závislosti, které potřebuje, aby si mohla sama načítat entity, ke kterým má nadefinovanou vazbu.
+[Entita](https://apidoc.intm.org/tharos/leanmapper/master/class-LeanMapper.Entity.html) vychází repositáři vstříc svými metodami `isModified()`, `isDetached()`, `detach()`, `getModifiedRowData()`, `attach($id)`, `markAsUpdated()` a `makeAlive($entityFactory, $connection, $mapper)`. Metoda `isModified()` vrací informaci, zda byla data v entitě od okamžiku jejího vytvoření pozměněná, `isDetached()` vrací informaci, zda se jedná o nově vytvořenou entitu nebo v databázi již existující, `detach()` umožňuje prohlásit entitu za nově vytvořenou, `getModifiedRowData()` vrací pole pozměněných hodnot (ve formátu položka => pozměněná hodnota), `attach($id)` slouží ke změnu stavu entity z nově vytvořené na již uloženou, `markAsUpdated()` označí entitu za nepozměněnou a konečně `makeAlive($entityFactory, $connection, $mapper)` poskytuje entitě závislosti, které potřebuje, aby si mohla sama načítat entity, ke kterým má nadefinovanou vazbu.
 
 Všimněte si parametru, který přijímá metoda `attach($id)` . ID záznamu v databázi zná bezprostředně po jeho vytvoření pouze repositář a tímto způsobem ho sděluje entitě.
 
@@ -155,7 +155,7 @@ echo $author->name;
 
 Franta? Nebo snad něco jiného?
 
-Vypíše Franta. Jak byste asi očekávali. ;) Důvodem je to, že ačkoliv první a druhá instance `Model\Entity\Author` skutečně nejsou ekvivalentní, obě operují nad stejnou instancí [`LeanMapper\Result`](https://codedoc.pub/tharos/leanmapper/master/class-LeanMapper.Result.html), která zapouzdřuje vlastní data. Chování Lean Mapperu se v podobných situacích snaží být maximálně intuitivní a transparentní.
+Vypíše Franta. Jak byste asi očekávali. ;) Důvodem je to, že ačkoliv první a druhá instance `Model\Entity\Author` skutečně nejsou ekvivalentní, obě operují nad stejnou instancí [`LeanMapper\Result`](https://apidoc.intm.org/tharos/leanmapper/master/class-LeanMapper.Result.html), která zapouzdřuje vlastní data. Chování Lean Mapperu se v podobných situacích snaží být maximálně intuitivní a transparentní.
 
 Dobrá rada na závěr: nikdy neuchovávejte žádné hodnoty entity přímo v entitě, ale vždy je deleguje až do `LeanMapper\Result` (typicky pomocí třídy `LeanMapper\Row`, jejíž instance je přítomná v každé entitě).
 
