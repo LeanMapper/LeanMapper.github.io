@@ -286,7 +286,7 @@ $books = $author->books;
 
 Nejprve definujeme entity `Book` a `Author`, poté si vytvoříme obecný filtr `CommonFilter::restrictAvailables`. Nejdůležitější je v tomto případě vlastní mapper - v něm definujeme metodu `getImplicitFilters`, která pro entitu `Book` vytvoří instanci objektu `LeanMapper\ImplicitFilters` - té předá nejprve seznam filtrů (zde pouze filtr `restrictAvailables`) a následně i adresovaný parametr s názvem tabulky, na kterou má být omezení aplikováno. Díky tomu nám bude volání `$author->books` vždy vracet jenom dostupné knihy.
 
-Metoda `getImplicitFilters` může kromě názvu entity obdržet ještě nepovinný parametr `$caller`. Implicitní filtry jsou obvykle aplikovány při volání metody `Repository::createFluent` - pak parametr `$caller` obsahuje odkaz na repositář, nebo při traverzování mezi entitami - v tom případě parametr `$caller` obsahuje odkaz na entitu a název property, přes kterou se traverzuje.
+Metoda `getImplicitFilters` může kromě názvu entity obdržet ještě nepovinný parametr `$caller`. Implicitní filtry jsou obvykle aplikovány při volání metody `Repository::createFluent` - pak parametr `$caller` obsahuje odkaz na repositář, nebo při traverzování mezi entitami - v tom případě parametr `$caller` obsahuje odkaz na entitu a property, přes kterou se traverzuje.
 
 
 ## Objekt Filtering - anonymní filtry {#toc-objekt-filtering}
