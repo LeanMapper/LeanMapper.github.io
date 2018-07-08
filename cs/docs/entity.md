@@ -105,7 +105,7 @@ U této položky jsme poprvé použili sufix `|null` u definice typu, který ř�
 @property Tag[] $tags m:hasMany
 ```
 
-Položka s názem `tags` je zajímavá dvěmi věcmi: sufixem `[]` v definici typu, který říká, že položka obsahuje pole instancí `Tag` (anebo volitelně nějakou kolekci instancí `Tag`) instancí `Tag`, a také je zajímavá příznakem `m:hasMany`, který definuje M:N vazbu mezi entitami `Book` a `Tag`.
+Položka s názem `tags` je zajímavá dvěmi věcmi: sufixem `[]` v definici typu, který říká, že položka obsahuje pole instancí `Tag` (anebo volitelně nějakou kolekci instancí `Tag`), a také je zajímavá příznakem `m:hasMany`, který definuje M:N vazbu mezi entitami `Book` a `Tag`.
 
 ```
 @property string $title  Name of the book
