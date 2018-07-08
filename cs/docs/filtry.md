@@ -227,7 +227,7 @@ Výše uvedený příklad načte pomocí `$book->tags` prvních 10 tagů souvise
 
 ## Implicitní filtry {#toc-implicitni-filtry}
 
-Výchozí, neboli implicitní, filtry jsou takové filtry, které budou aplikovány vždy bez ohledu na to, jestli jsou uvedeny v příznaku `m:filter`, či nikoli. Implicitní filtry se spouští z repozitáře v rámci metody `LeanMapper\Repository::createFluent()` - kvůli tomu nemůžou obdržet parametry předávané pomocí [auto-wiringu](#toc-parametry-filtru-auto-wiring). Využití naleznou např. pro soft-deleted entity a další podobné případy.
+Výchozí, neboli implicitní, filtry jsou takové filtry, které budou aplikovány vždy bez ohledu na to, jestli jsou uvedeny v příznaku `m:filter`, či nikoli. Implicitní filtry se spouští při traverzování mezi entitami a z repozitáře v rámci metody `LeanMapper\Repository::createFluent()` - kvůli tomu nemůžou obdržet parametry předávané pomocí [auto-wiringu](#toc-parametry-filtru-auto-wiring). Využití naleznou např. pro soft-deleted entity a další podobné případy.
 
 K definici implicitních filtrů slouží metoda `LeanMapper\IMapper::getImplicitFilters`, která vrací buď pole s názvy filtrů, nebo instanci objektu `LeanMapper\ImplicitFilters` - ta může kromě názvů obsahovat i [adresované parametry](#toc-parametry-filtru-adresovane), které se mají filtrům předat.
 
@@ -286,7 +286,7 @@ $books = $author->books;
 
 Nejprve definujeme entity `Book` a `Author`, poté si vytvoříme obecný filtr `CommonFilter::restrictAvailables`. Nejdůležitější je v tomto případě vlastní mapper - v něm definujeme metodu `getImplicitFilters`, která pro entitu `Book` vytvoří instanci objektu `LeanMapper\ImplicitFilters` - té předá nejprve seznam filtrů (zde pouze filtr `restrictAvailables`) a následně i adresovaný parametr s názvem tabulky, na kterou má být omezení aplikováno. Díky tomu nám bude volání `$author->books` vždy vracet jenom dostupné knihy.
 
-Metoda `getImplicitFilters` může kromě názvu entity obdržet ještě nepovinný parametr `$caller`. Implicitní filtry jsou obvykle aplikovány při volání metody `Repository::createFluent` - pak parametr `$caller` obsahuje odkaz na repositář, nebo při traverzování mezi entitami - v tom případě parametr `$caller` obsahuje odkaz na entitu a název property, přes kterou se traverzuje.
+Metoda `getImplicitFilters` může kromě názvu entity obdržet ještě nepovinný parametr `$caller`. Implicitní filtry jsou obvykle aplikovány při volání metody `Repository::createFluent` - pak parametr `$caller` obsahuje odkaz na repositář, nebo při traverzování mezi entitami - v tom případě parametr `$caller` obsahuje odkaz na entitu a property, přes kterou se traverzuje.
 
 
 ## Objekt Filtering - anonymní filtry {#toc-objekt-filtering}
