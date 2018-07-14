@@ -4,6 +4,7 @@ title: Články a videa
 
 ## Články
 
+* [Jan Pecha: Schema Generator - generujte svoji databázi z entit](https://www.janpecha.cz/blog/schemagenerator-generujte-svoji-databazi-z-entit/) (4. 6. 2018)
 * [Jan Pecha: Lean Mapper - přeměňte své mappery v Lego](https://www.janpecha.cz/blog/leanmapper-premente-sve-mappery-v-lego/) (7. 4. 2018)
 
 
