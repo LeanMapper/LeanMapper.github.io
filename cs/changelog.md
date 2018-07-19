@@ -5,6 +5,8 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* Změněn výchozí sloupec u `hasOne` vazeb, `DefaultMapper` v názvu sloupce použije název položky místo názvu tabulky (BC break, [#77](https://github.com/Tharos/LeanMapper/pull/77), [#127](https://github.com/Tharos/LeanMapper/issues/127))
+
 * Vazby `belongsTo` jsou označeny jako pouze pro čtení ([#124](https://github.com/Tharos/LeanMapper/pull/124), [#62](https://github.com/Tharos/LeanMapper/issues/62))
 
 * Přidána podpora pro `m:hasMany(#inversed)` ([#125](https://github.com/Tharos/LeanMapper/pull/125), [#123](https://github.com/Tharos/LeanMapper/issues/123))
