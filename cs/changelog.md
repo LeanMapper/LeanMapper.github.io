@@ -5,6 +5,11 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* Přidána podpora pro implicitní passThru ([#137](https://github.com/Tharos/LeanMapper/pull/137))
+
+* EntityReflection: vylepšen výkon ([#132](https://github.com/Tharos/LeanMapper/pull/132))
+
+
 ## [3.3.0](https://github.com/Tharos/LeanMapper/tree/v3.3.0) (11. 8. 2018)
 
 * Změněn výchozí sloupec u `hasOne` vazeb, `DefaultMapper` v názvu sloupce použije název položky místo názvu tabulky (BC break, [#77](https://github.com/Tharos/LeanMapper/pull/77), [#127](https://github.com/Tharos/LeanMapper/issues/127))
