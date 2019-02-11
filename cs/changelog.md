@@ -5,6 +5,14 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* EntityReflection: přidána možnost přizpůsobit údaje poskytované reflexí pomocí `IEntityReflectionProvider` ([#141](https://github.com/Tharos/LeanMapper/pull/141))
+
+* SQLite3 - volání `$entity->removeFromX()` způsobilo chybu, pokud nebylo SQLite zkompilováno s volbou `SQLITE_ENABLE_UPDATE_DELETE_LIMIT` ([#143](https://github.com/Tharos/LeanMapper/pull/143))
+
+* Result: `addToReferencing` ignoruje duplucitní hodnoty ([#143](https://github.com/Tharos/LeanMapper/pull/143))
+
+* Result: vytvoření instance pomocí `new self` změněno na `new static` ([#140](https://github.com/Tharos/LeanMapper/pull/140))
+
 * Přidána podpora pro implicitní passThru ([#137](https://github.com/Tharos/LeanMapper/pull/137))
 
 * EntityReflection: vylepšen výkon ([#132](https://github.com/Tharos/LeanMapper/pull/132))
