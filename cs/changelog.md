@@ -5,6 +5,10 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+## [3.4.0](https://github.com/Tharos/LeanMapper/tree/v3.4.0) (16. 3. 2019)
+
+* Nette DI extension: file logger používal neexistující třídu, nyní používá `Dibi\Loggers\FileLogger` ([#145](https://github.com/Tharos/LeanMapper/pull/145))
+
 * EntityReflection: přidána možnost přizpůsobit údaje poskytované reflexí pomocí `IEntityReflectionProvider` ([#141](https://github.com/Tharos/LeanMapper/pull/141))
 
 * SQLite3 - volání `$entity->removeFromX()` způsobilo chybu, pokud nebylo SQLite zkompilováno s volbou `SQLITE_ENABLE_UPDATE_DELETE_LIMIT` ([#143](https://github.com/Tharos/LeanMapper/pull/143))
