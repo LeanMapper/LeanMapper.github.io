@@ -13,7 +13,7 @@ redirect_from: "/changelog"
 
 * SQLite3 - volání `$entity->removeFromX()` způsobilo chybu, pokud nebylo SQLite zkompilováno s volbou `SQLITE_ENABLE_UPDATE_DELETE_LIMIT` ([#143](https://github.com/Tharos/LeanMapper/pull/143))
 
-* Result: `addToReferencing` ignoruje duplucitní hodnoty ([#143](https://github.com/Tharos/LeanMapper/pull/143))
+* Result: `addToReferencing` ignoruje duplicitní hodnoty ([#143](https://github.com/Tharos/LeanMapper/pull/143))
 
 * Result: vytvoření instance pomocí `new self` změněno na `new static` ([#140](https://github.com/Tharos/LeanMapper/pull/140))
 
