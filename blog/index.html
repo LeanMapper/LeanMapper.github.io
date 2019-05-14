@@ -1,0 +1,19 @@
+---
+title: Blog
+---
+<div class="posts">
+	{% for post in site.posts %}
+		<div class="post{% if forloop.first  %} post--first{% endif %}">
+			<h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+			<div class="post__perex">
+				<p>{{ post.excerpt | strip_html }}</p>
+			</div>
+
+			<div class="post__info">
+				<div class="post__author">{{ post.author }}</div>
+				<div class="post__date">{{ post.date | date: "%-d. %-m. %Y" }}</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

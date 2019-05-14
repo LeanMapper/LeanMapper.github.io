@@ -3,6 +3,28 @@ layout: default
 active: home
 ---
 
+# Novinky na <a href="/blog/">blogu</a>
+
+<div class="posts">
+	{% for post in site.posts limit:2 %}
+		<div class="post">
+			<h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+			<div class="post__perex">
+				<p>{{ post.excerpt | strip_html }}</p>
+			</div>
+
+			<div class="post__info">
+				<div class="post__author">{{ post.author }}</div>
+				<div class="post__date">{{ post.date | date: "%-d. %-m. %Y" }}</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+
+-----
+
+
 # Co je Lean Mapper
 
 - **Tenké ORM pro PHP postavené nad knihovnou [Dibi](https://dibiphp.com)**

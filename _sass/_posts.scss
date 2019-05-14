@@ -1,0 +1,59 @@
+.post {
+	margin-bottom: 2em;
+	// flex: 1;
+}
+
+.post__info {
+	font-size: 87.5%;
+	margin-bottom: 1em;
+}
+
+.post__author {
+	font-weight: bold;
+	display: inline-block;
+}
+
+.post__date {
+	font-size: 87.5%;
+	color: #666;
+	display: inline-block;
+}
+
+.post__date:before {
+	content: " / ";
+}
+
+.posts {
+}
+
+.posts .post__perex {
+	font-size: 87.5%;
+}
+
+.posts .post--first .post__title {
+	font-size: 200%;
+}
+
+.posts .post--first .post__perex {
+	font-size: 100%;
+}
+
+@media screen and (min-width: 42em) {
+	.posts {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.posts .post {
+		width: 48%;
+	}
+
+	.posts .post__info {
+		margin-bottom: 0;
+	}
+
+	.posts .post--first {
+		width: 100%;
+	}
+}

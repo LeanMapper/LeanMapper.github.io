@@ -21,11 +21,21 @@ markdown: kramdown
 permalink: pretty
 
 defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
   -
     scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: "page"
+
+collections:
+  posts:
+    output: true
+    permalink: "/blog/:name/"
 
 plugins:
   - jekyll-redirect-from
