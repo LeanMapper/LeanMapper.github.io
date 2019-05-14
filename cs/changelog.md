@@ -5,6 +5,14 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+
+## [3.4.1](https://github.com/Tharos/LeanMapper/tree/v3.4.1) (14. 5. 2019)
+
+* Repository: opraveno použití parametru `$table` v metodě `createEntities()` ([#148](https://github.com/Tharos/LeanMapper/pull/148), [4f4f9bf](https://github.com/Tharos/LeanMapper/commit/4f4f9bf1eaec31b295219406550f5ddad28381cd))
+
+* opraven coding style ([#147](https://github.com/Tharos/LeanMapper/pull/147), [6bcd65a](https://github.com/Tharos/LeanMapper/commit/6bcd65add0fcf51b6c6189bd3ff781e5121b9ecb))
+
+
 ## [3.4.0](https://github.com/Tharos/LeanMapper/tree/v3.4.0) (16. 3. 2019)
 
 * Nette DI extension: file logger používal neexistující třídu, nyní používá `Dibi\Loggers\FileLogger` ([#145](https://github.com/Tharos/LeanMapper/pull/145))
