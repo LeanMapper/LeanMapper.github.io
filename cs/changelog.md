@@ -5,6 +5,39 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* kód testován na PHP 8.0
+
+* Entity: přiřazení hodnoty (`set()`/`__set()`) kontroluje typ položky, tj. nejde do položky typu `int` přiřadit `string` apod. (BC BREAK)
+
+* Result: opravena chyba při volání `cleanReferencing`/`cleanReferenced` v kombinaci s `FilteringResult`
+
+* používá typehinty dostupné od PHP 7.1 (BC BREAK)
+
+* Repository: vyhazuje vyjímku při přístupu k neexistující property (např. `$repository->onUnexists[]`)
+
+* Fluent: nepřepisuje statickou proměnnou `$masks` (BC BREAK)
+
+* úpravy v kódu, coding style
+
+* přidána možnost v mapperu konvertovat hodnoty načtené z databáze před předáním do `LeanMapper\Row` a zpět (umožňuje např. používat value objekty bez anotace `m:passThru` v entitě)
+
+* kód je testován pomocí PhpStanu
+
+* Nette DI extension: opravena kompatibilita s nette/di ^3.0
+
+* všechny soubory obsahují `declare(strict_types=1)`
+
+* IMapper: `getRelationshipColumn()` - přidán nový parametr `$relationshipName` ([#77](https://github.com/Tharos/LeanMapper/issues/77))
+
+* DefaultMapper: `$defaultEntityNamespace` se nově mění pomocí konstruktoru (BC BREAK)
+
+* Vyžaduje Dibi 4.x a PHP 7.1 nebo novější (BC break)
+
+
+## [3.4.2](https://github.com/Tharos/LeanMapper/tree/v3.4.2) (1. 4. 2020)
+
+* Nette DI extension: opravena kompatibilita s nette/robot-loader 3.0+ ([#151](https://github.com/Tharos/LeanMapper/pull/151))
+
 
 ## [3.4.1](https://github.com/Tharos/LeanMapper/tree/v3.4.1) (14. 5. 2019)
 
