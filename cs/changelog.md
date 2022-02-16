@@ -5,7 +5,23 @@ redirect_from: "/changelog"
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
-* kód testován na PHP 8.0
+
+## [4.0.3](https://github.com/Tharos/LeanMapper/tree/v4.0.3) (16. 2. 2022)
+
+* opravena kompatibilita s PHP 8.1 ([#163](https://github.com/Tharos/LeanMapper/pull/163))
+
+
+## [4.0.2](https://github.com/Tharos/LeanMapper/tree/v4.0.2) (18. 1. 2022)
+
+* Entita: opravena chyba při čtení nullable položky s vazbou `m:hasOne` ([#161](https://github.com/Tharos/LeanMapper/issues/161))
+
+
+## [4.0.1](https://github.com/Tharos/LeanMapper/tree/v4.0.1) (20. 10. 2021)
+
+* EntityReflection: opravena chyba při použití FQN (`\Foo\Bar`) v příznaku `m:enum`
+
+
+## [4.0.0](https://github.com/Tharos/LeanMapper/tree/v4.0.0) (25. 3. 2021)
 
 * Entity: přiřazení hodnoty (`set()`/`__set()`) kontroluje typ položky, tj. nejde do položky typu `int` přiřadit `string` apod. (BC BREAK)
 
@@ -31,7 +47,7 @@ redirect_from: "/changelog"
 
 * DefaultMapper: `$defaultEntityNamespace` se nově mění pomocí konstruktoru (BC BREAK)
 
-* Vyžaduje Dibi 4.x a PHP 7.1 nebo novější (BC break)
+* Vyžaduje Dibi 4.x a PHP 7.2 nebo novější (BC break)
 
 
 ## [3.4.2](https://github.com/Tharos/LeanMapper/tree/v3.4.2) (1. 4. 2020)
