@@ -20,7 +20,7 @@ Pokud tedy používáte např. vlastní mapper, budete muset doplnit typehinty k
 
 ## Konverze hodnot z databáze
 
-Hlavní novinka této verze. Pokud chcete, máte nyní možnost upravit hodnoty, které přicházejí z databáze před tím než se předají do entity (včetně zpětné konverze ve směru entita => databáze).
+Hlavní novinka této verze. Pokud chcete, máte nyní možnost upravit hodnoty, které přicházejí z databáze předtím než se předají do entity (včetně zpětné konverze ve směru entita => databáze).
 
 Otevírá to cestu k různým konverzím hodnot (`string` na `DateTime`) nebo nativnímu použití value objektů (můžeme např. snadno převést emailovou adresu uloženou v databázi na objekt `EmailAddress`). Dříve to šlo realizovat jen pomocí vlastního getteru nebo příznaku `m:passThru`, což nebylo příliš efektivní.
 
