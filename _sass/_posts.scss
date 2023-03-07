@@ -57,3 +57,15 @@
 		width: 100%;
 	}
 }
+
+
+@media screen and (min-width: 60em) {
+	.posts .post {
+		width: 31%;
+	}
+
+
+	.posts .post--first {
+		width: 100%;
+	}
+}

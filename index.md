@@ -6,7 +6,7 @@ active: home
 # Novinky na <a href="/blog/">blogu</a>
 
 <div class="posts">
-	{% for post in site.posts limit:2 %}
+	{% for post in site.posts limit:3 %}
 		<div class="post">
 			<h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
