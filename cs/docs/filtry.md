@@ -72,7 +72,7 @@ class BookFilter
 
 Filtry v příznaku `m:filter` můžeme zřetězit - Lean Mapper filtry zavolá jeden po druhém. Jednotlivé filtry se oddělují čárkou.
 
-``` php?start_inline=1
+```
  * @property Book[] $books m:belongsToMany m:filter(bookOrderByName, bookOnlyAvailable)
 ```
 
