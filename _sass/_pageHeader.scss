@@ -1,0 +1,47 @@
+.page-header {
+	color: #fff;
+	text-align: center;
+	background-color: #159957;
+}
+
+@media screen and (min-width: 64em) {
+	.page-header {
+		padding: 5rem 6rem;
+	}
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+	.page-header {
+		padding: 3rem 4rem;
+	}
+}
+
+@media screen and (max-width: 42em) {
+	.page-header {
+		padding: 2rem 1rem;
+	}
+}
+
+.page-header-subpage {
+	padding: 1rem;
+}
+
+.page-header-subpage .project-name {
+	font-size: 2rem;
+	display: block;
+	vertical-align: middle;
+	margin-bottom: 0.75rem;
+}
+
+.page-header-subpage .btn {
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+@media screen and (min-width: 64em) {
+	.page-header-subpage .project-name {
+		display: inline-block;
+		margin-right: 4.5rem;
+		margin-bottom: 0;
+	}
+}
