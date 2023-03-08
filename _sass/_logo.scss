@@ -1,0 +1,54 @@
+.project-name {
+	margin-top: 0;
+	margin-bottom: 0.1rem;
+}
+
+.project-name a {
+	color: inherit;
+}
+
+.project-name a:hover {
+	text-decoration: none;
+}
+
+@media screen and (min-width: 64em) {
+	.project-name {
+		font-size: 3.25rem;
+	}
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+	.project-name {
+		font-size: 2.25rem;
+	}
+}
+
+@media screen and (max-width: 42em) {
+	.project-name {
+		font-size: 1.75rem;
+	}
+}
+
+.project-tagline {
+	margin-bottom: 2rem;
+	font-weight: normal;
+	opacity: 0.7;
+}
+
+@media screen and (min-width: 64em) {
+	.project-tagline {
+		font-size: 1.25rem;
+	}
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+	.project-tagline {
+		font-size: 1.15rem;
+	}
+}
+
+@media screen and (max-width: 42em) {
+	.project-tagline {
+		font-size: 1rem;
+	}
+}
