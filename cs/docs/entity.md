@@ -51,8 +51,6 @@ Preferovaným (a nejstručnějším) způsobem, jak nadefinovat položky entity,
 Možnosti anotací nejsnáze popíšeme ukázkou:
 
 ``` php
-<?php
-
 namespace Model\Entity;
 
 use DateTime as PlaceInTime;
@@ -124,8 +122,6 @@ Položka s názvem `available` bude obsahovat logickou hodnotu a je zajímavá t
 O tom, jak se definují položky pomocí anotací, jsme si udělali velmi dobrou představu. Na závěr si už jen ukažme pár **nesprávných** definic:
 
 ``` php
-<?php
-
 namespace Model\Entity;
 
 /**
@@ -147,8 +143,6 @@ class Book extends \LeanMapper\Entity
 Výše uvedenou entitu můžeme kompletně přepsat do následující podoby:
 
 ``` php
-<?php
-
 namespace Model\Entity;
 
 use DateTime as PlaceInTime;
@@ -256,7 +250,6 @@ Pokud je definována přístupová metoda, má při přístupu k položce vždy 
 Následující ukázka demonstruje, jak lze k položkám entity přistupovat. Je jedno zda jsou položky definovány pomocí anotací nebo pomocí přístupových metod:
 
 ``` php
-<?php
 // $book instanceof Model\Entity\Book
 $book->id;
 $book->title;
@@ -271,8 +264,6 @@ $book->setTitle('New title');
 Užitečnou metodou je metoda `assign(array $values, array $whitelist = null)`, kterou entity dědí z `LeanMapper\Entity`. Umožňuje hromadně přiřadit hodnoty do více položek:
 
 ``` php
-<?php
-
 $entity->assign(array(
     'title' => 'Modified title',
     'description' => 'lorem ipsum',
@@ -287,8 +278,6 @@ Prvním parametrem je pole ve formátu položka => nová hodnota a druhým, voli
 Pokud vámi používaný framework například umí vracet hodnoty z formulářů v podobě pole, váš kód může být takto stručný:
 
 ``` php
-<?php
-
 $author->assign($form->getValues(), array('title', 'name', 'web');
 ```
 

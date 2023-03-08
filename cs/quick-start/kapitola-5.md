@@ -14,8 +14,6 @@ Ukážeme si nyní pár ukázek, jak se s tím, co jsme v předchozích kapitol�
 Abyste při vlastních experimentech obdrželi stejný výstup jako je zde v quick startu, použijte připravenou [SQLite databázi včetně dat](/cs/quick-start/kapitola-2/) a na začátek každého skriptu vložte následujících pár řádků kódu:
 
 ``` php
-<?php
-
 function write($value, $indent = 0) {
 	echo str_repeat(' ', $indent), $value, "\n";
 }
@@ -47,8 +45,6 @@ Vypište všechny knihy a u každé uveďte jejího autora a seznam výpůjček.
 ### Řešení
 
 ``` php
-<?php
-
 $bookRepository = new BookRepository($connection, $mapper, $entityFactory);
 
 foreach ($bookRepository->findAll() as $book) {
@@ -123,8 +119,6 @@ Vypište všechny známé autory (respektive recenzenty) a u každého uveďte, 
 ### Řešení
 
 ``` php
-<?php
-
 $authorRepository = new AuthorRepository($connection, $mapper, $entityFactory);
 
 foreach ($authorRepository->findAll() as $author) {
@@ -203,8 +197,6 @@ Vypište všechny známé autory (respektive recenzenty) a ke každému z nich v
 ### Řešení
 
 ``` php
-<?php
-
 $authorRepository = new AuthorRepository($connection, $mapper, $entityFactory);
 
 foreach ($authorRepository->findAll() as $author) {

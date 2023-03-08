@@ -25,8 +25,6 @@ Jelikož persistenci za nás běžně kompletně řeší podědění třídy `Le
 V pomyslné druhé části můžeme velmi výhodně využít protected metod `createEntity` a `createEntities`:
 
 ``` php
-<?php
-
 namespace Model\Repository;
 
 class AuthorRepository extends \LeanMapper\Repository

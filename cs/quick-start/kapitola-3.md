@@ -20,8 +20,6 @@ V quick startu si představíme nejstručnější způsob, jak lze entity v Lean
 ![Entity Tag a Borrower](/img/qs-schema-tag+borrower.png)
 
 ``` php
-<?php
-
 namespace Model\Entity;
 
 /**
@@ -55,8 +53,6 @@ Entita `Borrower` a její abstraktní základ `Person` demonstrují plně podpor
 Složitější (ale také zajímavější) je entita `Book`:
 
 ``` php
-<?php
-
 namespace Model\Entity;
 
 /**
@@ -107,8 +103,6 @@ Příznak `m:belongsToMany` u položy `$borrowings` definuje vazbu typu 1:N pozo
 Následující entita bude reprezentovat autora (připomeňme si, že autoři mohou být také recenzenty):
 
 ``` php
-<?php
-
 namespace Model\Entity;
 
 /**
@@ -148,8 +142,6 @@ Příznak `m:belongsToMany` u položky `$books` umožňuje získat pro vybranéh
 Poslední entitou, kterou budeme potřebovat, souvisí s již zmíněnou tabulkou borrowing:
 
 ``` php
-<?php
-
 namespace Model\Entity;
 
 /**

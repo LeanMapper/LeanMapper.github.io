@@ -6,8 +6,6 @@ redirect_from: "/quick-start/kapitola-4"
 Jak už jeho název napovídá, Lean Mapper je silně inspirován návrhovým vzorem Data Mapper. Proto se v něm entity **neumějí samy vytvářet, persistovat, mazat a v podstatě ani načítat** (načítání je tak trochu výjimkou, protože entita si dokáže sama načíst entity, ke kterým má nadefinovanou vazbu). To je důvod, proč potřebujeme repositáře.
 
 ``` php
-<?php
-
 namespace Model\Repository;
 
 abstract class Repository extends \LeanMapper\Repository

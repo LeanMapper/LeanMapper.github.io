@@ -11,8 +11,6 @@ redirect_from: "/dokumentace/persistence"
 Lean Mapper obsahuje vestavěnou podporu pro persistenci hodnot entity, které byly pozměněny, a také pro vytváření nových entit a odstraňování nepotřebných. Máme-li entity a repositáře z [quick startu](/cs/quick-start/), můžeme rovnou přistoupit k ukázkám kódu:
 
 ``` php
-<?php
-
 use Model\Entity\Author;
 use Model\Repository\AuthorRepository;
 
@@ -41,8 +39,6 @@ $authorRepository->delete($author);
 ```
 
 ``` php
-<?php
-
 use Model\Entity\Book;
 use Model\Repository\AuthorRepository;
 use Model\Repository\BookRepository;
@@ -77,14 +73,10 @@ Aby byla persistence v Lean Mapperu co nejintuitivnější, má určitá specifi
 V Lean Mapperu strikně platí, že entity neumějí samy sebe persistovat – potřebují k tomu [repositáře](/cs/docs/repositare/). V následující ukázce se uloží pozměněný název knihy, ale už ne pozměněný název autora:
 
 ``` php
-<?php
-
 $book = $bookRepository->find(1);
-
 $book->name = 'New book name';
 
 $author = $book->author;
-
 $author->name = 'New author name';
 
 $bookRepository->persist($book);
@@ -97,8 +89,6 @@ Pokud bychom chtěli uložit i pozměněný název autora, museli bychom někam 
 Dále existuje v Lean Mapperu pravidlo, díky kterému lze v naší ukázce přes výchozí magický `__set` knihy přiřadit pouze takového autora, který už v databázi existuje. Následující kód tedy skončí výjimkou:
 
 ``` php
-<?php
-
 $book = $bookRepository->find(1);
 
 $author = new Author;
@@ -115,8 +105,6 @@ Nově vytvořeného autora bychom museli před přiřazením vložit do databáz
 Co postupně vykoná následující kód?
 
 ``` php
-<?php
-
 $book = $bookRepository->find(1);
 
 $bookRepository->delete($book);
@@ -141,8 +129,6 @@ Všimněte si parametru, který přijímá metoda `attach($id)` . ID záznamu v 
 Co vypíše následující kód?
 
 ``` php
-<?php
-
 $book = $bookRepository->find(1);
 
 $author = $book->author;
