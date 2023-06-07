@@ -1,9 +1,13 @@
-<h1 class="project-name"><a href="{{ '/' | prepend: site.baseurl }}">Lean Mapper</a></h1>
-{% if page.active == "home" %}
-<h2 class="project-tagline">Lean Mapper je malé ORM postavené nad knihovnou Dibi (abstraktní databázovou vrstvou pro PHP)</h2>
-{% endif %}
-<a class="btn" href="{{ '/' | prepend: site.baseurl }}">Úvod</a>
-<a class="btn" href="{{ '/cs/' | prepend: site.baseurl }}">Dokumentace</a>
-<a class="btn" href="{{ '/blog/' | prepend: site.baseurl }}">Blog</a>
-<a class="btn" href="{{ '/cs/download/' | prepend: site.baseurl }}">Download</a>
-<a class="btn" href="https://github.com/Tharos/LeanMapper">GitHub</a>
+<div class="headerContainer">
+	<h1 class="project-name"><a href="{{ '/' | prepend: site.baseurl }}">Lean Mapper</a></h1>
+	{% if page.active == "home" %}
+	<h2 class="project-tagline">Lean Mapper je malé ORM postavené nad knihovnou Dibi (abstraktní databázovou vrstvou pro PHP)</h2>
+	{% endif %}
+	<nav class="mainMenu">
+		<a class="mainMenuLink" href="{{ '/' | prepend: site.baseurl }}">Úvod</a>
+		<a class="mainMenuLink" href="{{ '/cs/' | prepend: site.baseurl }}">Dokumentace</a>
+		<a class="mainMenuLink" href="{{ '/blog/' | prepend: site.baseurl }}">Blog</a>
+		<a class="mainMenuLink" href="{{ '/cs/download/' | prepend: site.baseurl }}">Download</a>
+		<a class="mainMenuLink" href="https://github.com/Tharos/LeanMapper">GitHub</a>
+	</nav>
+</div>

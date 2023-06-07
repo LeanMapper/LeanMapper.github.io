@@ -1,0 +1,43 @@
+.mainMenu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+
+.mainMenuLink {
+    display: block;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.23rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+}
+
+
+.mainMenuLink:hover,
+.mainMenuLink:focus,
+.mainMenuLink:active {
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+@media only screen and (min-width: 60em) {
+	.mainMenu {
+		column-gap: 1em;
+	}
+
+
+	.mainMenuLink {
+		padding: 0.5em 1em;
+		font-size: 100%;
+	}
+}
