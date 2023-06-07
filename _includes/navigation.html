@@ -1,0 +1,44 @@
+{%- assign currentSlugs = page.url | split: "/" %}
+{%- assign parentSlugsCount = currentSlugs.size | minus: 1 %}
+{%- assign parentSlugs = currentSlugs | slice: 0, parentSlugsCount %}
+{%- assign parentPath = parentSlugs | join: "/" | append: '/' %}
+
+{%- if parentPath == "/" %}
+	{%- assign parentPath = page.url %}
+{%- endif %}
+
+{%- if parentPath != "/" %}
+<nav class="contextMenu">
+	{%- assign entries = site.pages | sort: "path" %}
+
+	{%- for entry in entries %}
+		{%- if entry.url == parentPath %}
+			<a href="{{entry.url}}" class="contextMenu__title">{{entry.title}}</a>
+		{%- endif %}
+	{%- endfor %}
+
+	<ul class="contextMenu__items">
+	{%- for entry in entries %}
+		{%- assign entrySlugs = entry.url | split: "/" %}
+		{%- assign entrySlugsCount = entrySlugs.size | minus: 1 %}
+		{%- assign entrySlugs = entrySlugs | slice: 0, entrySlugsCount %}
+		{%- assign entryParentPath = entrySlugs | join: "/" | append: "/" %}
+
+		{%- if entry.url == parentPath %}
+			{%- continue %}
+		{%- endif %}
+
+		{%- if entryParentPath != parentPath %}
+			{%- continue %}
+		{%- endif %}
+
+		{%- assign entryTitle = entry.title | trim %}
+
+		{%- if entryTitle %}
+			<li class="contextMenu__item"><a href="{{entry.url}}" class="contextMenuLink{% if entry.url == page.url %} contextMenuLink--current{% endif %}">{{entryTitle}}</a></li>
+		{%- endif %}
+
+	{%- endfor %}
+	</ul>
+</nav>
+{%- endif %}

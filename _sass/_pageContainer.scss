@@ -1,0 +1,29 @@
+.pageContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+
+.pageContainer > .page {
+	flex: 1 1 min-content;
+	max-width: 56rem;
+}
+
+
+.pageContainer > .contextMenu {
+	flex: 0 0 15em;
+}
+
+
+@media only screen and (min-width: 60rem) {
+	.pageContainer {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.pageContainer > .page {
+		order: 1;
+	}
+}

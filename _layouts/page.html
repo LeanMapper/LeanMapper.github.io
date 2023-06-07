@@ -2,7 +2,12 @@
 layout: default
 ---
 {% include breadcrumbs.html %}
-<article class="page">
-  <h1 class="page-title" id="page-title">{{ page.title }}</h1>
-  {{ content }}
-</article>
+
+<div class="pageContainer">
+	<article class="page">
+		<h1 class="page-title" id="page-title">{{ page.title }}</h1>
+		{{ content }}
+	</article>
+
+	{% include navigation.html %}
+</div>

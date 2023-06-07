@@ -1,0 +1,50 @@
+.contextMenu {
+	display: block;
+	border-top: 2px solid #eee;
+    padding-top: 0.75rem;
+}
+
+
+.contextMenu__title {
+	font-size: 112.5%;
+	padding: 0.5rem 0;
+	font-weight: bold;
+	display: block;
+	color: #159957;
+}
+
+
+.contextMenu__items {
+	list-style: none;
+	margin-left: 0;
+	padding: 0;
+}
+
+
+.contextMenuLink {
+	display: block;
+	padding: 0.375rem 0;
+	padding-right: 0.5rem;
+	font-size: 87.5%;
+	position: relative;
+}
+
+
+.contextMenuLink--current {
+	font-weight: bold;
+	color: #159957;
+	border-color: #159957;
+}
+
+
+.contextMenuLink--current:before {
+	content: " » ";
+}
+
+
+@media only screen and (min-width: 60rem) {
+	.contextMenu {
+		border-top: none;
+		padding-top: 0;
+	}
+}
