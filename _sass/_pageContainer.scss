@@ -7,7 +7,8 @@
 
 .pageContainer > .page {
 	flex: 1 1 min-content;
-	max-width: 54rem;
+	max-width: 56rem;
+	overflow-x: auto;
 }
 
 
