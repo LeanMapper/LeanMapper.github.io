@@ -21,12 +21,13 @@
 .main-content h5,
 .main-content h6 {
 	margin-top: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 	color: #159957;
 }
 
 .main-content p {
-	margin-bottom: 1em;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .main-content code {
@@ -41,7 +42,7 @@
 .main-content pre {
 	padding: 0.8rem;
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 	font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	word-wrap: normal;
 	border: solid 1px #dce6f0;
@@ -60,7 +61,7 @@
 }
 
 .main-content .highlight {
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 .main-content .highlight pre {
@@ -70,7 +71,7 @@
 
 .main-content .highlight pre,
 .main-content pre {
-	padding: 1rem 1.5rem;
+	padding: 1.5rem 1.5rem;
 	overflow: auto;
 	font-size: 0.8125rem;
 	line-height: 1.5;
@@ -105,10 +106,16 @@
 }
 
 .main-content blockquote {
-	padding: 0 1rem;
+	padding: 1.5rem;
 	margin-left: 0;
-	color: #819198;
-	border-left: 0.3rem solid #dce6f0;
+	color: #000;
+	border: 0.125rem solid #dce6f0;
+	background: #fbfcfe;
+	border-radius: 0.25rem;
+	margin-top: 2rem;
+	margin-right: 0;
+	margin-bottom: 2rem;
+	background: transparent;
 }
 
 .main-content blockquote >:first-child {
@@ -150,13 +157,13 @@
 
 .main-content dl dd {
 	padding: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 .main-content hr {
 	height: 2px;
 	padding: 0;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 	background-color: #eff0f1;
 	border: 0;
 }
