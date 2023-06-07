@@ -1,6 +1,7 @@
 ---
 title: Filtry
 redirect_from: "/dokumentace/filtry"
+rank: 50
 ---
 
 * [Úvod](#page-title)

@@ -9,7 +9,7 @@
 
 {%- if parentPath != "/" %}
 <nav class="contextMenu">
-	{%- assign entries = site.pages | sort: "path" %}
+	{%- assign entries = site.pages | sort: "rank" %}
 
 	{%- for entry in entries %}
 		{%- if entry.url == parentPath %}

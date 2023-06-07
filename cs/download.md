@@ -1,6 +1,7 @@
 ---
 title: Download
 redirect_from: "/download"
+rank: 60
 ---
 
 Lean Mapper je primárně dostupný přes [Packagist](https://packagist.org/packages/tharos/leanmapper).

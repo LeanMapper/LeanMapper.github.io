@@ -1,5 +1,6 @@
 ---
 title: EntityFactory
+rank: 70
 ---
 
 EntityFactory je třída implementující rozhraní `LeanMapper\IEntityFactory`. Stará se o vytváření entit.

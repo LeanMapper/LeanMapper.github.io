@@ -1,5 +1,6 @@
 ---
 title: Příručka
+rank: 20
 ---
 
 Příručka vás seznámí se všemy aspekty Lean Mapperu a pomůže vám vytěžit z něj maximum.

@@ -1,5 +1,6 @@
 ---
 title: Ukázky použití a zajímavá řešení
+rank: 30
 ---
 
 Všechny ukázky najdete v [repozitáři](https://github.com/leanmapper/examples) na GitHubu.

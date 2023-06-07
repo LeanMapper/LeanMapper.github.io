@@ -1,5 +1,6 @@
 ---
 title: Mapper
+rank: 60
 ---
 
 Mapper je třída implementující rozhraní `LeanMapper\IMapper`. Mapper definuje výchozí [konvence](../konvence/) používané systémem. Jedná se např. o tvar názvu vazební tabulky, převod názvu entity na název tabulky, apod.

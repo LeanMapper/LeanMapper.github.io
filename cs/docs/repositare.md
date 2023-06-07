@@ -1,6 +1,7 @@
 ---
 title: Repositáře
 redirect_from: "/dokumentace/repositare"
+rank: 20
 ---
 
 * [Úvod](#page-title)

@@ -1,5 +1,6 @@
 ---
 title: SQL strategie
+rank: 90
 ---
 
 * [Úvod](#page-title)

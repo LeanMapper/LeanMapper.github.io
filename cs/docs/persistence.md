@@ -1,6 +1,7 @@
 ---
 title: Persistence
 redirect_from: "/dokumentace/persistence"
+rank: 40
 ---
 
 * [Úvod](#page-title)

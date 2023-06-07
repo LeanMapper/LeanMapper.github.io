@@ -1,5 +1,6 @@
 ---
 title: Rozšíření, addony
+rank: 40
 ---
 
 _Některá rozšíření naleznete také na fóru v sekci [Rozšíření](https://leanmapper-forum.intm.org/t/rozsireni)._

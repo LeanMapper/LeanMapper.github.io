@@ -1,5 +1,6 @@
 ---
 title: Systém událostí
+rank: 100
 ---
 
 * [Úvod](#page-title)

@@ -1,5 +1,6 @@
 ---
 title: API dokumentace
+rank: 80
 ---
 
 * [Vývojová verze](https://apidoc.intm.org/tharos/leanmapper/develop/index.html)

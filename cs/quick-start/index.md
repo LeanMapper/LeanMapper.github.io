@@ -1,6 +1,7 @@
 ---
 title: Quick start
 redirect_from: "/quick-start/"
+rank: 10
 ---
 
 Quick start se sestává z pěti krátkých kapitol, které vám představí, jak Lean Mapper funguje a jak se používá.

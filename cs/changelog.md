@@ -1,6 +1,7 @@
 ---
 title: Changelog
 redirect_from: "/changelog"
+rank: 70
 ---
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)

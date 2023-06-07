@@ -1,6 +1,7 @@
 ---
 title: Entity
 redirect_from: "/dokumentace/entity"
+rank: 10
 ---
 
 * [Úvod](#page-title)

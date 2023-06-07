@@ -1,5 +1,6 @@
 ---
 title: Integrace Lean Mapperu do aplikace
+rank: 80
 ---
 
 * [Úvod](#page-title)
