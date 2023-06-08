@@ -1,6 +1,5 @@
 .post {
-	margin-bottom: 2em;
-	// flex: 1;
+	display: block;
 }
 
 .post__info {
@@ -24,10 +23,16 @@
 }
 
 .posts {
+	display: grid;
+	gap: 3rem 2rem;
 }
 
 .posts .post__perex {
 	font-size: 87.5%;
+}
+
+.posts .post__info {
+	margin-bottom: 0;
 }
 
 .posts .post--first {
@@ -45,32 +50,20 @@
 
 @media screen and (min-width: 42em) {
 	.posts {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.posts .post {
-		width: 48%;
-	}
-
-	.posts .post__info {
-		margin-bottom: 0;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.posts .post--first {
-		width: 100%;
+		grid-column: span 2;
 	}
 }
 
-
 @media screen and (min-width: 60em) {
-	.posts .post {
-		width: 31%;
+	.posts {
+		grid-template-columns: repeat(3, 1fr);
 	}
 
-
 	.posts .post--first {
-		width: 100%;
+		grid-column: span 3;
 	}
 }
