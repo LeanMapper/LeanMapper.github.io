@@ -53,7 +53,7 @@ Tímto příznakem říkáme Lean Mapperu, že má při získávání kolekce au
 Filtrem může být jakákoli volatelná metoda, nebo funkce (klidně anonymní). Filtr zaregistrujeme pomocí metody `LeanMapper\Connection::registerFilter()`, které předáme název filtru a odkaz na zvolenou metodu/funkci.
 
 ``` php?start_inline=1
-$connection->registerFilter('bookOrderByName', array('BookFilter', 'orderByName'));
+$connection->registerFilter('bookOrderByName', ['BookFilter', 'orderByName']);
 ```
 
 Uvedený řádek zaregistruje filtr `bookOrderByName` a zároveň říká, že se má při použití tohoto filtru zavolat statická metoda `BookFilter::orderByName`. Samotný filtr bude úplně jednoduchý, jen přidá do připraveného dotazu klauzuli `ORDER BY` s názvem sloupce:
@@ -95,7 +95,7 @@ Prvním parametrem filtru je vždy instance objektu `LeanMapper\Fluent`, která 
 Další parametry můžou obsahovat entitu a property (`LeanMapper\Reflection\Property`), u které byl filtr zapsán. Aby k předání došlo, musíme při registraci filtru uvést jednu z konstant `LeanMapper\Connection::WIRE_*`.
 
 ``` php?start_inline=1
-$connection->registerFilter('bookOrderByName', array('BookFilter', 'orderByName'), LeanMapper\Connection::WIRE_ENTITY_AND_PROPERTY);
+$connection->registerFilter('bookOrderByName', ['BookFilter', 'orderByName'], LeanMapper\Connection::WIRE_ENTITY_AND_PROPERTY);
 ```
 
 Uvedený zápis řekne Lean Mapperu, že má filtru předat ve druhém parametru entitu a ve třetím property:
@@ -131,7 +131,7 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('limit', array('CommonFilter', 'limit'));
+$connection->registerFilter('limit', ['CommonFilter', 'limit']);
 
 
 /**
@@ -162,7 +162,7 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('limit', array('CommonFilter', 'limit'));
+$connection->registerFilter('limit', ['CommonFilter', 'limit']);
 
 
 /**
@@ -199,8 +199,8 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('limit', array('CommonFilter', 'limit'));
-$connection->registerFilter('orderBy', array('CommonFilter', 'orderBy'));
+$connection->registerFilter('limit', ['CommonFilter', 'limit']);
+$connection->registerFilter('orderBy', ['CommonFilter', 'orderBy']);
 
 
 /**
@@ -261,7 +261,7 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('restrictAvailables', array('CommonFilter', 'restrictAvailables'));
+$connection->registerFilter('restrictAvailables', ['CommonFilter', 'restrictAvailables']);
 
 class Mapper extends LeanMapper\DefaultMapper
 {
@@ -269,12 +269,12 @@ class Mapper extends LeanMapper\DefaultMapper
 	{
 		if ($entityClass === 'Book') {
 			return new LeanMapper\ImplicitFilters(
-				array('restrictAvailables'),
-				array(
-					'restrictAvailables' => array( // parametry pro filtr 'restrictAvailables'
+				['restrictAvailables'],
+				[
+					'restrictAvailables' => [ // parametry pro filtr 'restrictAvailables'
 						$this->getTable($entityClass),
-					),
-				)
+					],
+				]
 			);
 		}
 		return parent::getImplicitFilters($entityClass, $caller);

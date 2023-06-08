@@ -36,7 +36,7 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('limit', array('CommonFilter', 'limit'));
+$connection->registerFilter('limit', ['CommonFilter', 'limit']);
 
 
 /**

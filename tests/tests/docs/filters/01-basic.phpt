@@ -26,7 +26,7 @@ class Author extends LeanMapper\Entity
 }
 
 
-$connection->registerFilter('bookOrderByName', array('BookFilter', 'orderByName'));
+$connection->registerFilter('bookOrderByName', ['BookFilter', 'orderByName']);
 
 
 class BookFilter
@@ -50,7 +50,7 @@ $author = reset($authors);
 
 $author->books;
 
-Assert::same(array(
+Assert::same([
 	'SELECT * FROM [author]',
 	'SELECT [book].* FROM [book] WHERE [book].[author_id] IN (1, 2, 3, 4, 5) ORDER BY [name]',
-), $container->getQueries()->getAll());
+], $container->getQueries()->getAll());

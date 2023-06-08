@@ -21,8 +21,8 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('limit', array('CommonFilter', 'limit'));
-$connection->registerFilter('orderBy', array('CommonFilter', 'orderBy'));
+$connection->registerFilter('limit', ['CommonFilter', 'limit']);
+$connection->registerFilter('orderBy', ['CommonFilter', 'orderBy']);
 
 
 /**

@@ -115,8 +115,8 @@ class Author extends Person
 
 	public function getReferencingTags()
 	{
-		$tags = array();
-		foreach (array(null, 'reviewer_id') as $viaColumn) {
+		$tags = [];
+		foreach ([null, 'reviewer_id'] as $viaColumn) {
 			foreach ($this->row->referencing('book', $viaColumn) as $book) {
 				foreach ($book->referencing('book_tag') as $tagRelation) {
 					$row = $tagRelation->referenced('tag');

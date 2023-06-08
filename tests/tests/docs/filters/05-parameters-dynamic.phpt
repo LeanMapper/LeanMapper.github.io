@@ -15,7 +15,7 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('limit', array('CommonFilter', 'limit'));
+$connection->registerFilter('limit', ['CommonFilter', 'limit']);
 
 
 /**
@@ -50,7 +50,7 @@ $author = reset($authors);
 $books = $author->getBooks(20);
 //// \example
 
-Assert::same(array(
+Assert::same([
 	'SELECT * FROM [author]',
 	'SELECT [book].* FROM [book] WHERE [book].[author_id] IN (1, 2, 3, 4, 5) LIMIT 20',
-), $container->getQueries()->getAll());
+], $container->getQueries()->getAll());

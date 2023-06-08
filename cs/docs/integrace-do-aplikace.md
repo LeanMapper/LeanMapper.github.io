@@ -19,13 +19,13 @@ rank: 80
 Vytvoříme si objekt `LeanMapper\Connection` a předáme mu parametry potřebné pro připojení k databázi.
 
 ``` php?start_inline=1
-$connection = new LeanMapper\Connection(array(
+$connection = new LeanMapper\Connection([
     'driver'   => 'mysqli',
     'host'     => 'localhost',
     'username' => 'root',
     'password' => '***',
     'database' => 'mydatabase',
-));
+]);
 ```
 
 **Tip:** `LeanMapper\Connection` přebírá stejné parametry jako třída [`Dibi\Connection`](https://api.dibiphp.com/Dibi.Connection.html).

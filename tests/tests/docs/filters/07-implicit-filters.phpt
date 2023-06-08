@@ -33,7 +33,7 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('restrictAvailables', array('CommonFilter', 'restrictAvailables'));
+$connection->registerFilter('restrictAvailables', ['CommonFilter', 'restrictAvailables']);
 
 class Mapper extends LeanMapper\DefaultMapper
 {
@@ -44,12 +44,12 @@ class Mapper extends LeanMapper\DefaultMapper
 	{
 		if ($entityClass === 'Book') {
 			return new LeanMapper\ImplicitFilters(
-				array('restrictAvailables'),
-				array(
-					'restrictAvailables' => array(
+				['restrictAvailables'],
+				[
+					'restrictAvailables' => [
 						$this->getTable($entityClass),
-					),
-				)
+					],
+				]
 			);
 		}
 		return parent::getImplicitFilters();
@@ -73,7 +73,7 @@ $author = reset($authors);
 $books = $author->books;
 //// \example
 
-Assert::same(array(
+Assert::same([
 	'SELECT * FROM [author]',
 	'SELECT [book].* FROM [book] WHERE [book].[author_id] IN (1, 2, 3, 4, 5) AND [book].[available] = 1',
-), $container->getQueries()->getAll());
+], $container->getQueries()->getAll());

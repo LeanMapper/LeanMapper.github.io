@@ -200,7 +200,7 @@ class Book extends \LeanMapper\Entity
 
     public function getTags()
     {
-        $value = array();
+        $value = [];
         foreach ($this->row->referencing('book_tag') as $row) {
             $value[] = new Tag($row->referenced('tag'));
         }
@@ -265,13 +265,13 @@ $book->setTitle('New title');
 Užitečnou metodou je metoda `assign(array $values, array $whitelist = null)`, kterou entity dědí z `LeanMapper\Entity`. Umožňuje hromadně přiřadit hodnoty do více položek:
 
 ``` php
-$entity->assign(array(
+$entity->assign([
     'title' => 'Modified title',
     'description' => 'lorem ipsum',
     'number' => 42,
-));
+]);
 
-$entity->assign($newValues, array('title', 'description'));
+$entity->assign($newValues, ['title', 'description']);
 ```
 
 Prvním parametrem je pole ve formátu položka => nová hodnota a druhým, volitelným, je „whitelist“ položek, které se berou v úvahu. Pokud je metoda volána se dvěma parametry, pozměněné hodnoty položek, které nejsou vyjmenovány ve „whitelistu“, se ignorují.
@@ -279,7 +279,7 @@ Prvním parametrem je pole ve formátu položka => nová hodnota a druhým, voli
 Pokud vámi používaný framework například umí vracet hodnoty z formulářů v podobě pole, váš kód může být takto stručný:
 
 ``` php
-$author->assign($form->getValues(), array('title', 'name', 'web');
+$author->assign($form->getValues(), ['title', 'name', 'web']);
 ```
 
 Nutno zdůraznit, že se jedná jen o jakýsi syntaktický cukr a pod pokličkou se volají jednotlivé settery entity, které obvykle obsahují validační pravidla. Jedná se tedy o naprosto bezpečný a legitimní způsob práce s entitou.
@@ -486,8 +486,8 @@ $application->addToTags('JavaScript');
 $application->removeFromTags('JavaScript');
 
 $application->removeAllTags();
-$application->replaceAllTags(array($tag1, $tag2)); // mass replace by Entity[]
-$application->replaceAllTags(array(5, 6)); // mass replace by IDs
+$application->replaceAllTags([$tag1, $tag2]); // mass replace by Entity[]
+$application->replaceAllTags([5, 6]); // mass replace by IDs
 
 $applicationRepository->persist($application);
 ```
@@ -506,10 +506,10 @@ Také platí, že pokud například desetkrát odeberete vazbu na tag `SQL`, kte
 **POZOR!** Aby vše takhle hezky mohlo fungovat, existuje jedno drobné omezení. Pokud vytváříte například novou entitu aplikace `(new Application)`, je zapotřebí ji před tím, než jí začnete přiřazovat tagy, **persistovat**.
 
 ``` php?start_inline=1
-$application = new Application(array(
+$application = new Application([
     'title' => 'New application',
     'slogan' => 'lorem ipsum',
-));
+]);
 
 $applicationRepository->persist($application);
 
@@ -583,7 +583,7 @@ class Book extends LeanMapper\Entity
 		$this->active = true;
 		$this->count = 10;
 		$this->title = 'McDonald\'s restaurant';
-		$this->list = array();
+		$this->list = [];
 		$this->date = null;
 	}
 }

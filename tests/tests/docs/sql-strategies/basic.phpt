@@ -15,7 +15,7 @@ class CommonFilter
 	}
 }
 
-$connection->registerFilter('limit', array('CommonFilter', 'limit'));
+$connection->registerFilter('limit', ['CommonFilter', 'limit']);
 
 
 /**
@@ -44,18 +44,18 @@ class AuthorRepository extends TestRepository
 
 $authorRepository = $container->createRepository('AuthorRepository');
 $authors = $authorRepository->findAll();
-$books = array();
+$books = [];
 
 foreach ($authors as $author) {
 	foreach ($author->books as $book) {
-		$books[] = array(
+		$books[] = [
 			'author' => $author->id,
 			'book' => $book->id,
-		);
+		];
 	}
 }
 
-Assert::same(array(
+Assert::same([
 	array(
 		'author' => 1,
 		'book' => 1,
@@ -75,4 +75,4 @@ Assert::same(array(
 		'author' => 5,
 		'book' => 4,
 	),
-), $books);
+], $books);

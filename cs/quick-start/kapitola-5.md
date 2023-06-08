@@ -22,10 +22,10 @@ function separate() {
 	echo "\n-----\n\n";
 }
 
-$connection = new \LeanMapper\Connection(array(
+$connection = new \LeanMapper\Connection([
 	'driver' => 'sqlite3',
 	'database' => __DIR__ . '/path-to-database/quickstart.sq3',
-));
+]);
 $mapper = new \LeanMapper\DefaultMapper;
 $entityFactory = new \LeanMapper\DefaultEntityFactory;
 

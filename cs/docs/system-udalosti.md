@@ -22,7 +22,7 @@ $authorRepository = new AuthorRepository($connection, $mapper, $entityFactory);
 $authorRepository->onBeforePersist[] = function (Author $author) {
 	// obsluha udalosti
 };
-$authorRepository->onAfterCreate[] = array($obj, 'method');
+$authorRepository->onAfterCreate[] = [$obj, 'method'];
 $authorRepository->onBeforeDelete[] = 'Class::method';
 ```
 

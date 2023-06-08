@@ -27,10 +27,10 @@ class Container
 	public function getConnection()
 	{
 		if (!$this->connection) {
-			$this->connection = new Connection(array(
+			$this->connection = new Connection([
 				'driver' => 'sqlite3',
 				'database' => __DIR__ . '/db/library.sq3',
-			));
+			]);
 
 			$queries = $this->getQueries();
 
@@ -78,7 +78,7 @@ class Container
 
 class QueriesLog
 {
-	private $queries = array();
+	private $queries = [];
 
 
 	public function add($query)
@@ -95,7 +95,7 @@ class QueriesLog
 
 	public function reset()
 	{
-		$this->queries = array();
+		$this->queries = [];
 	}
 }
 
@@ -132,7 +132,7 @@ class Helpers
 {
 	public static function data($entities, array $fields = NULL)
 	{
-		$result = array();
+		$result = [];
 
 		if ($fields !== NULL) {
 			$fields = array_flip($fields);
