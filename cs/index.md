@@ -20,7 +20,6 @@ redirect_from: "/dokumentace/"
 
 * [Ukázky použití a zajímavá řešení](/cs/tutorials/)
 * [Rozšíření, addony](/cs/rozsireni/)
-* [Články a videa](/cs/clanky-videa/)
 * [Fórum](https://leanmapper-forum.intm.org/), [Fórum (staré)](https://forum.dibiphp.com/cs/f82-lean-mapper), [Gitter](https://gitter.im/castamir/LeanMapperChat), [Slack](https://pehapkari.slack.com/messages/leanmapper)
 
 -----
