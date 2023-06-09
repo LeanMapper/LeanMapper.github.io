@@ -16,8 +16,3 @@ composer require tharos/leanmapper
 Zdrojový kód je dostupný pod MIT licencí na server [GitHub.com](https://github.com/tharos/leanmapper).
 
 * [Vývojová verze (ZIP)](https://github.com/Tharos/LeanMapper/archive/develop.zip)
-
-
-## [API dokumentace](/cs/api/)
-
-Online API dokumentace k jednotlivým verzím je dostupná na stránce [API dokumentace](/cs/api/).

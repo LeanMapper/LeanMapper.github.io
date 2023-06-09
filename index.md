@@ -54,4 +54,3 @@ active: home
 
 1. Přečtete si [quick start](/cs/quick-start/)
 2. Podle potřeby nastudujte [podrobnou dokumentaci](/cs/)
-3. Nepřehlédněte [dokumentaci API](/cs/api/)

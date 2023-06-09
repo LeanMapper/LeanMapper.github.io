@@ -19,6 +19,10 @@
 
 	<ul class="contextMenu__items">
 	{%- for entry in entries %}
+		{%- if entry.hidden %}
+			{%- continue %}
+		{%- endif %}
+
 		{%- assign entrySlugs = entry.url | split: "/" %}
 		{%- assign entrySlugsCount = entrySlugs.size | minus: 1 %}
 		{%- assign entrySlugs = entrySlugs | slice: 0, entrySlugsCount %}

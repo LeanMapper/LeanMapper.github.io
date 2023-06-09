@@ -1,5 +1,6 @@
 ---
 title: API dokumentace
+hidden: true
 rank: 80
 ---
 

@@ -9,7 +9,7 @@ rank: 20
 * [Metoda getTable()](#toc-metody)
 
 
-Repositáře typicky (nikoliv ale nezbytně) reprezentují potomci abstraktní třídy [`LeanMapper\Repository`](https://apidoc.intm.org/tharos/leanmapper/master/class-LeanMapper.Repository.html). Ta obsahuje pouze výchozí implementaci metod pro persistenci a odstranění entity a několik pomocných protected metod usnadňujících definici konkrétních repositářů.
+Repositáře typicky (nikoliv ale nezbytně) reprezentují potomci abstraktní třídy `LeanMapper\Repository`. Ta obsahuje pouze výchozí implementaci metod pro persistenci a odstranění entity a několik pomocných protected metod usnadňujících definici konkrétních repositářů.
 
 Význam repositářů je následující: v souladu s návrhovým vzorem Data mapper, kterým je Lean Mapper silně inspirován, se entity bez cizí pomoci neumějí načítat ani persistovat (tj. ukládat se do databáze nebo se z ní mazat). K tomu jsou zapotřebí repositáře. Repositáře mají za úkol načítat entity z databáze a pokud se nějaká entita v průběhu svého života změní, mají za úkol umožnit uložení těchto změn do databáze. Zodpovědností repositářů je také entity trvale odstraňovat a vytvářet zbrusu nové.
 

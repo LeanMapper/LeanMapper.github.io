@@ -26,5 +26,4 @@ redirect_from: "/dokumentace/"
 
 * [Download](/cs/download/)
 * [Changelog](/cs/changelog/)
-* [API dokumentace](/cs/api/)
 * [Podpořte vývoj](/cs/donate/)
