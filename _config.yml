@@ -36,6 +36,8 @@ collections:
   posts:
     output: true
     permalink: "/blog/:name/"
+  addons:
+    sort_by: description
 
 plugins:
   - jekyll-redirect-from
