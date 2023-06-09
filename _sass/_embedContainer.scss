@@ -1,0 +1,20 @@
+.embedContainer {
+	margin: 2rem 0;
+}
+
+.embedContainer iframe,
+.embedContainer object,
+.embedContainer embed {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	aspect-ratio: 640 / 390;
+	margin: 0 auto;
+}
+
+.embedDescription {
+	text-align: center;
+	color: gray;
+	margin: 2rem 0;
+	font-style: italic;
+}

@@ -1,0 +1,42 @@
+.externalLink {
+	margin: 2rem auto;
+	background: #fafafa;
+	border-radius: 0.375rem;
+	padding: 1rem 1.25rem;
+	max-width: 40rem;
+}
+
+
+.externalLink__title {
+	display: block;
+	font-size: 1.125rem;
+	margin-bottom: 0.5rem;
+}
+
+
+.externalLink__author {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	font-size: 0.875rem;
+}
+
+
+.externalLink__date {
+	color: gray;
+	font-size: 0.8125rem;
+}
+
+
+@media only screen and (min-width: 40em) {
+	.externalLink {
+		padding: 1.5rem 2rem;
+	}
+
+	.externalLink__title {
+		font-size: 1.5rem;
+	}
+
+	.externalLink__author {
+		font-size: 1rem;
+	}
+}
