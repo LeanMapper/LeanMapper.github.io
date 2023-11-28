@@ -1,3 +1,23 @@
+.button {
+	display: inline-block;
+	color: #fff;
+	background-color: #009b4f;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.23rem;
+	transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+	padding: 0.5rem 1rem;
+}
+
+
+.button:hover,
+.button:focus,
+.button:active {
+	background: #07a959;
+}
+
+
 .btn {
 	display: inline-block;
 	margin-bottom: 1rem;

@@ -1,0 +1,18 @@
+.contentColumns {
+	display: grid;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+
+.contentColumn {
+	min-width: 0;
+	grid-column: span 1;
+}
+
+
+@media screen and (min-width: 42em) {
+	.contentColumns--2cols {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

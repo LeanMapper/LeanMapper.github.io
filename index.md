@@ -3,6 +3,7 @@ layout: default
 active: home
 ---
 
+{:.u-text-center}
 # Novinky na <a href="/blog/">blogu</a>
 
 <div class="posts">
@@ -24,7 +25,49 @@ active: home
 
 -----
 
+{:.u-text-center}
+# Seznamte se
 
+{::options parse_block_html="true" /}
+<div class="contentColumns contentColumns--2cols">
+<div class="contentColumn">
+```php
+/**
+ * @property int $id
+ * @property string $name
+ * @property string|null $description
+ * @property string|null $website
+ * @property Author $author m:hasOne
+ * @property Author|null $reviewer m:hasOne
+ * @property Borrowing[] $borrowings m:belongsToMany
+ * @property Tag[] $tags m:hasMany
+ * @property bool $available
+ */
+class Book extends \LeanMapper\Entity
+{
+}
+```
+</div>
+<div class="contentColumn">
+```php
+$book = new Book;
+$book->name = 'The Lord of the Rings';
+$book->author = $tolkien;
+$book->reviewer = NULL;
+$book->available = TRUE;
+
+$bookRepository->persist($book);
+```
+
+{:.u-text-center}
+[Quick Start](/cs/quick-start/){: class="button"}
+[Dokumentace](/cs/){: class="button"}
+</div>
+</div>
+
+
+<div class="contentColumns contentColumns--2cols">
+<div class="contentColumn">
 # Co je Lean Mapper
 
 - **Tenké ORM pro PHP postavené nad knihovnou [Dibi](https://dibiphp.com)**
@@ -38,8 +81,10 @@ active: home
 
 - **Knihovna s minimem závislostí**
 <br> Jedinou závislostí Lean Mapperu je [Dibi](https://dibiphp.com).
+</div>
 
 
+<div class="contentColumn">
 # Co Lean Mapper není
 
 - **Moloch**
@@ -50,7 +95,10 @@ active: home
 
 - **Nezdokumentované cosi**
 
+
 # Jak začít
 
 1. Přečtete si [quick start](/cs/quick-start/)
 2. Podle potřeby nastudujte [podrobnou dokumentaci](/cs/)
+</div>
+</div>
