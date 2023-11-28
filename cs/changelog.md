@@ -7,6 +7,16 @@ rank: 70
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
 
+## [4.0.5](https://github.com/Tharos/LeanMapper/tree/v4.0.3) (28. 11. 2023)
+
+* přidána podpora pro PHP 8.3 ([#165](https://github.com/Tharos/LeanMapper/pull/165))
+
+
+## [4.0.4](https://github.com/Tharos/LeanMapper/tree/v4.0.3) (15. 8. 2023)
+
+* přidána podpora pro Dibi 5.x ([#164](https://github.com/Tharos/LeanMapper/pull/164))
+
+
 ## [4.0.3](https://github.com/Tharos/LeanMapper/tree/v4.0.3) (16. 2. 2022)
 
 * opravena kompatibilita s PHP 8.1 ([#163](https://github.com/Tharos/LeanMapper/pull/163))
