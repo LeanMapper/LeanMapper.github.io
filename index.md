@@ -23,6 +23,9 @@ active: home
 	{% endfor %}
 </div>
 
+{:.u-text-center}
+<a href="/blog/" class="button button--small">Starší články</a>
+
 -----
 
 {:.u-text-center}
