@@ -6,6 +6,18 @@ rank: 70
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+* Entity: přidána traita `Initialize` ([#167](https://github.com/Tharos/LeanMapper/pull/167))
+
+* Entity: přidána podpora pro typ `non-empty-string` u položek entity ([#167](https://github.com/Tharos/LeanMapper/pull/167))
+
+* Entity: `settype()` nahrazeno vlastní metodou `Helpers::convertType()` ([#167](https://github.com/Tharos/LeanMapper/pull/167))
+
+* Entity: opraveno pořadí volání kontroly typu a setter pass ([#167](https://github.com/Tharos/LeanMapper/pull/167))
+
+* Entity: přidána podpora pro nullable syntaxi `?Foo` ([#167](https://github.com/Tharos/LeanMapper/pull/167))
+
+* IEntityFactory: vylepšena návratová hodnota u metody `createCollection()` ([#167](https://github.com/Tharos/LeanMapper/pull/167))
+
 
 ## [4.0.5](https://github.com/Tharos/LeanMapper/tree/v4.0.3) (28. 11. 2023)
 
