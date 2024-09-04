@@ -6,6 +6,9 @@ rank: 70
 
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
+
+## [4.1.0](https://github.com/Tharos/LeanMapper/tree/v4.1.0) (4. 9. 2024)
+
 * Entity: přidána traita `Initialize` ([#167](https://github.com/Tharos/LeanMapper/pull/167))
 
 * Entity: přidána podpora pro typ `non-empty-string` u položek entity ([#167](https://github.com/Tharos/LeanMapper/pull/167))
