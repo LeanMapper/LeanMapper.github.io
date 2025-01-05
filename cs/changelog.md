@@ -7,6 +7,13 @@ rank: 70
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
 
+## [4.2.0](https://github.com/Tharos/LeanMapper/tree/v4.2.0) (5. 1. 2025)
+
+* přidána podpora pro PHP 8.4 ([#168](https://github.com/Tharos/LeanMapper/pull/168))
+
+* odebrána podpora pro PHP 7.2 a 7.3
+
+
 ## [4.1.0](https://github.com/Tharos/LeanMapper/tree/v4.1.0) (4. 9. 2024)
 
 * Entity: přidána traita `Initialize` ([#167](https://github.com/Tharos/LeanMapper/pull/167))
