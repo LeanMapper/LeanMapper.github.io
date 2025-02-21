@@ -7,6 +7,11 @@ rank: 70
 ## [Vývojová verze](https://github.com/Tharos/LeanMapper/tree/develop)
 
 
+## [4.2.1](https://github.com/Tharos/LeanMapper/tree/v4.2.1) (21. 2. 2025)
+
+* Entity: navráceno původní méně striktní chování `m:passThru` pro settery (změněno v 4.1.0) ([#169](https://github.com/Tharos/LeanMapper/issues/169))
+
+
 ## [4.2.0](https://github.com/Tharos/LeanMapper/tree/v4.2.0) (5. 1. 2025)
 
 * přidána podpora pro PHP 8.4 ([#168](https://github.com/Tharos/LeanMapper/pull/168))
